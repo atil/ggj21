@@ -51,21 +51,11 @@ public class Player : MonoBehaviour
 
         transform.position += (Vector3)_velocity;
 
-        Collider2D[] colliders = Physics2D.OverlapBoxAll(transform.position, _collider.size , 0);
+        Collider2D[] colliders = Physics2D.OverlapBoxAll(transform.position, _collider.size, 0);
         foreach (Collider2D c in colliders)
         {
-            if (c == _collider)
-            {
-                continue;
-            }
-
-            if (c.TryGetComponent(out TraverseTrigger traverseTrigger))
-            {
-                Game.Traverse(traverseTrigger.Direction);
-                return;
-            }
-            
-            if (c.isTrigger)
+            if (c == _collider
+                && c.gameObject.layer == LayerMask.NameToLayer("Trigger"))
             {
                 continue;
             }
@@ -76,5 +66,22 @@ public class Player : MonoBehaviour
             _velocity = Vector2.zero;
         }
 
+        bool isInTraverseTrigger = false;
+        foreach (Collider2D c in colliders)
+        {
+            if (c.TryGetComponent(out TraverseTrigger traverseTrigger))
+            {
+                isInTraverseTrigger = true;
+                if (_canTraverse)
+                {
+                    _canTraverse = false;
+                    Game.Traverse(traverseTrigger.Direction);
+                }
+            }
+        }
+        if (!isInTraverseTrigger)
+        {
+            _canTraverse = true;
+        }
     }
 }
