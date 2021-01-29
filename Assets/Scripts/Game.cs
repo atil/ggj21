@@ -1,7 +1,5 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Tilemaps;
 
 public class Game : MonoBehaviour
 {
@@ -19,47 +17,35 @@ public class Game : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            Room targetRoom = CurrentRoom.RoomLeft;
-            if (targetRoom != null)
-            {
-                StartCoroutine(RoomMoveCoroutine(CurrentRoom, RoomTargetMiddle, RoomTargetRight, true, false));
-                StartCoroutine(RoomMoveCoroutine(targetRoom, RoomTargetLeft, RoomTargetMiddle, true, true));
-                CurrentRoom = targetRoom;
-            }
+            DoRoomTransition(CurrentRoom.RoomUp, RoomTargetRight, RoomTargetLeft);
         }
 
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-            Room targetRoom = CurrentRoom.RoomRight;
-            if (targetRoom != null)
-            {
-                StartCoroutine(RoomMoveCoroutine(CurrentRoom, RoomTargetMiddle, RoomTargetLeft, true, false));
-                StartCoroutine(RoomMoveCoroutine(targetRoom, RoomTargetRight, RoomTargetMiddle, true, true));
-                CurrentRoom = targetRoom;
-            }
+            DoRoomTransition(CurrentRoom.RoomUp, RoomTargetLeft, RoomTargetRight);
         }
 
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            Room targetRoom = CurrentRoom.RoomUp;
-            if (targetRoom != null)
-            {
-                StartCoroutine(RoomMoveCoroutine(CurrentRoom, RoomTargetMiddle, RoomTargetDown, true, false));
-                StartCoroutine(RoomMoveCoroutine(targetRoom, RoomTargetUp, RoomTargetMiddle, true, true));
-                CurrentRoom = targetRoom;
-            }
+            DoRoomTransition(CurrentRoom.RoomUp, RoomTargetDown, RoomTargetUp);
         }
 
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
-            Room targetRoom = CurrentRoom.RoomDown;
-            if (targetRoom != null)
-            {
-                StartCoroutine(RoomMoveCoroutine(CurrentRoom, RoomTargetMiddle, RoomTargetUp, true, false));
-                StartCoroutine(RoomMoveCoroutine(targetRoom, RoomTargetDown, RoomTargetMiddle, true, true));
-                CurrentRoom = targetRoom;
-            }
+            DoRoomTransition(CurrentRoom.RoomDown, RoomTargetUp, RoomTargetDown);
         }
+    }
+
+    private void DoRoomTransition(Room targetRoom, Transform currentRoomTarget, Transform toRoomTarget)
+    {
+        if (targetRoom == null)
+        {
+            return;
+        }
+
+        StartCoroutine(RoomMoveCoroutine(CurrentRoom, RoomTargetMiddle, currentRoomTarget, true, false));
+        StartCoroutine(RoomMoveCoroutine(targetRoom, toRoomTarget, RoomTargetMiddle, true, true));
+        CurrentRoom = targetRoom;
     }
 
     private IEnumerator RoomMoveCoroutine(Room room, Transform moveSource, Transform moveTarget, bool activeBeforeMove, bool activeAfterMove)
