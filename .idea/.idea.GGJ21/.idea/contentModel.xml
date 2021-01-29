@@ -11,7 +11,8 @@
           <e p="Game.cs" t="Include" />
           <e p="Player.cs" t="Include" />
           <e p="Room.cs" t="Include" />
-          <e p="TextToggle.cs" t="Include" />
+          <e p="TextShowOnCollision.cs" t="Include" />
+          <e p="TraverseTrigger.cs" t="Include" />
         </e>
       </e>
       <e p="GGJ21.sln" t="IncludeFlat" />

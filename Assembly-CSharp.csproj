@@ -61,6 +61,8 @@
      <Compile Include="Assets\Scripts\Game.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\Room.cs" />
+     <Compile Include="Assets\Scripts\TextShowOnCollision.cs" />
+     <Compile Include="Assets\Scripts\TraverseTrigger.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>D:/Unity Repos/ggj21/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
@@ -91,9 +93,6 @@
  <Reference Include="Unity.2D.Animation.Triangle.Runtime">
  <HintPath>D:/Unity Repos/ggj21/Library/ScriptAssemblies/Unity.2D.Animation.Triangle.Runtime.dll</HintPath>
  </Reference>
- <Reference Include="PsdPlugin">
- <HintPath>D:/Unity Repos/ggj21/Library/ScriptAssemblies/PsdPlugin.dll</HintPath>
- </Reference>
  <Reference Include="Unity.CollabProxy.Editor">
  <HintPath>D:/Unity Repos/ggj21/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
@@ -102,9 +101,6 @@
  </Reference>
  <Reference Include="Unity.Mathematics">
  <HintPath>D:/Unity Repos/ggj21/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
- </Reference>
- <Reference Include="Unity.2D.Psdimporter.Editor">
- <HintPath>D:/Unity Repos/ggj21/Library/ScriptAssemblies/Unity.2D.Psdimporter.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.InternalAPIEngineBridge.001">
  <HintPath>D:/Unity Repos/ggj21/Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.001.dll</HintPath>
