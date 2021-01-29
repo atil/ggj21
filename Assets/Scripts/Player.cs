@@ -52,6 +52,11 @@ public class Player : MonoBehaviour
                 continue;
             }
 
+            if (c.isTrigger)
+            {
+                continue;
+            }
+            
             ColliderDistance2D dist = c.Distance(_collider);
             Vector2 penet = dist.distance * dist.normal;
             transform.position -= (Vector3)penet;
