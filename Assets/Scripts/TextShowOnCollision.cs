@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,7 +10,7 @@ public class TextShowOnCollision : MonoBehaviour
     public GameObject TextBottomGo;
 
     private GameObject _textGo;
-    private Text _textUI;
+    private TextMeshProUGUI _textUI;
     private BoxCollider2D _collider;
     
     private bool _onTrigger;
@@ -28,7 +26,7 @@ public class TextShowOnCollision : MonoBehaviour
             _textGo = TextBottomGo;
         }
 
-        _textUI = _textGo.GetComponent<Text>();
+        _textUI = _textGo.GetComponent<TextMeshProUGUI>();
         _collider = GetComponent<BoxCollider2D>();
         _onTrigger = false;
     }
@@ -54,13 +52,14 @@ public class TextShowOnCollision : MonoBehaviour
         if (!_onTrigger && _onTriggerCurrentFrame)
         {
             _textGo.SetActive(true);
-            _textUI.text = Text;
+            _textUI.SetText(Text);
         }
 
         if (_onTrigger && !_onTriggerCurrentFrame)
         {
             _textGo.SetActive(false);
-            _textUI.text = "";
+            _textUI.SetText("");
+            
         }
 
         _onTrigger = _onTriggerCurrentFrame;
