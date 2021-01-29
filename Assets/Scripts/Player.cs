@@ -7,8 +7,10 @@ public class Player : MonoBehaviour
 {
     public float Acceleration = 1f;
     public float Friction = 1.1f;
-    private BoxCollider2D _collider;
+    public Game Game;
 
+    private BoxCollider2D _collider;
+    private bool _canTraverse = true;
     private Vector2 _velocity;
 
     void Start()
@@ -18,6 +20,11 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+        if (Game.IsTraversing)
+        {
+            return;
+        }
+
         float dt = Time.deltaTime;
         if (Input.GetKey(KeyCode.W))
         {
@@ -50,6 +57,12 @@ public class Player : MonoBehaviour
             if (c == _collider)
             {
                 continue;
+            }
+
+            if (c.TryGetComponent(out TraverseTrigger traverseTrigger))
+            {
+                Game.Traverse(traverseTrigger.Direction);
+                return;
             }
 
             ColliderDistance2D dist = c.Distance(_collider);
