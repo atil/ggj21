@@ -1,0 +1,9 @@
+- transition
+  - polish
+- show text UI
+- interaction to show text
+- doors
+  - open doors
+
+later
+- halkalari parlatma

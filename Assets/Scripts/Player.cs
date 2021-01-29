@@ -2,34 +2,41 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(BoxCollider2D))]
 public class Player : MonoBehaviour
 {
-    public BoxCollider2D Collider;
+    public float Acceleration = 1f;
+    public float Friction = 1.1f;
+    private BoxCollider2D _collider;
 
     private Vector2 _velocity;
-    private float _acceleration = 1f;
+
+    void Start()
+    {
+        _collider = GetComponent<BoxCollider2D>();
+    }
 
     void Update()
     {
         float dt = Time.deltaTime;
         if (Input.GetKey(KeyCode.W))
         {
-            _velocity += Vector2.up * _acceleration * dt;
+            _velocity += Vector2.up * Acceleration * dt;
         }
         if (Input.GetKey(KeyCode.A))
         {
-            _velocity += Vector2.left * _acceleration * dt;
+            _velocity += Vector2.left * Acceleration * dt;
         }
         if (Input.GetKey(KeyCode.S))
         {
-            _velocity += Vector2.down * _acceleration * dt;
+            _velocity += Vector2.down * Acceleration * dt;
         }
         if (Input.GetKey(KeyCode.D))
         {
-            _velocity += Vector2.right * _acceleration * dt;
+            _velocity += Vector2.right * Acceleration * dt;
         }
 
-        _velocity *= 0.9f;
+        _velocity /= Friction;
         if (_velocity.sqrMagnitude < 0.000001f)
         {
             _velocity = Vector2.zero;
@@ -37,15 +44,15 @@ public class Player : MonoBehaviour
 
         transform.position += (Vector3)_velocity;
 
-        Collider2D[] colliders = Physics2D.OverlapBoxAll(transform.position, Collider.size , 0);
+        Collider2D[] colliders = Physics2D.OverlapBoxAll(transform.position, _collider.size , 0);
         foreach (Collider2D c in colliders)
         {
-            if (c == Collider)
+            if (c == _collider)
             {
                 continue;
             }
 
-            ColliderDistance2D dist = c.Distance(Collider);
+            ColliderDistance2D dist = c.Distance(_collider);
             Vector2 penet = dist.distance * dist.normal;
             transform.position -= (Vector3)penet;
             _velocity = Vector2.zero;

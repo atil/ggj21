@@ -254,7 +254,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 667352f5f1dd2494d96a0e04b8d72a8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentRoom: {fileID: 0}
+  CurrentRoom: {fileID: 1370354318}
   RoomTargetLeft: {fileID: 360053580}
   RoomTargetRight: {fileID: 411234059}
   RoomTargetMiddle: {fileID: 2005603824}
@@ -1843,7 +1843,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d8334836187f504b882fd31e1f276cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Collider: {fileID: 1937524719}
+  Acceleration: 1
+  Friction: 1.1
 --- !u!4 &1937524722
 Transform:
   m_ObjectHideFlags: 0
