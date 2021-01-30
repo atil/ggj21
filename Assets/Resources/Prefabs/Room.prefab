@@ -71,7 +71,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 199
   m_Sprite: {fileID: 21300000, guid: 8d5958975a4004945bd778c3c2671d03, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -588,6 +588,7 @@ MonoBehaviour:
   RoomDown: {fileID: 0}
   RoomLeft: {fileID: 0}
   RoomRight: {fileID: 0}
+  EventActionsOnEnter: []
 --- !u!1 &910216774454537330
 GameObject:
   m_ObjectHideFlags: 0
