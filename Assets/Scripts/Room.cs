@@ -25,7 +25,7 @@ public class Room : MonoBehaviour
     {
         foreach (var e in EventActionsOnEnter)
         {
-            e.Call( (RoomEnteranceDirection)((int)direction));
+            e.Call( (RoomEnteranceDirection)((int)direction), isFirstEntry);
         }
     }
 }
