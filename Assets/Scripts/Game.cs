@@ -55,14 +55,16 @@ public class Game : MonoBehaviour
         Player.transform.SetParent(CurrentRoom.transform);
         StartCoroutine(FadePlayer(PlayerFadeType.Hide, TraverseDuration * 0.3f));
         yield return new WaitForSeconds(TraverseDuration / 2f);
-        Vector3Int cellPos = Grid.WorldToCell(Player.transform.position);
+        Vector3 offset = new Vector3(0.49f, -0.49f, 0.0f);
+        Vector3Int cellPos = Grid.WorldToCell(Player.transform.position + offset);
+        Debug.Log(Player.transform.position);
         switch (direction)
         {
             case TraverseDirection.Up:
                 cellPos = new Vector3Int(cellPos.x, -5, 0);
                 break;
             case TraverseDirection.Down:
-                cellPos = new Vector3Int(cellPos.x, 5, 0);
+                cellPos = new Vector3Int(cellPos.x, 4, 0);
                 break;
             case TraverseDirection.Left:
                 cellPos = new Vector3Int(4, cellPos.y, 0);
@@ -72,7 +74,7 @@ public class Game : MonoBehaviour
                 break;
         }
 
-        Player.transform.localPosition = Grid.CellToWorld(cellPos) + new Vector3(-0.5f, 0.5f, 0);
+        Player.transform.localPosition = Grid.CellToWorld(cellPos) - offset;
         Player.transform.SetParent(targetRoom.transform, false);
         StartCoroutine(FadePlayer(PlayerFadeType.Show, TraverseDuration * 0.3f));
         yield return new WaitForSeconds(TraverseDuration / 2f);
