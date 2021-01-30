@@ -70,10 +70,13 @@ public class Game : MonoBehaviour
             if (targetRoom == CurrentRoom)
             {
                 IsTraversing = true;
+                const float coeff = 0.75f;
+                TraverseDuration *= coeff;
                 yield return StartCoroutine(RoomMoveCoroutine(CurrentRoom, RoomTargetMiddle, currentRoomTarget, true, true));
                 yield return StartCoroutine(RoomMoveCoroutine(CurrentRoom, destinationRoomTarget, RoomTargetMiddle, true, true));
                 ChangeCurrentRoom(targetRoom);
                 IsTraversing = false;
+                TraverseDuration *= 1 / coeff;
             }
             else // Different room
             {
