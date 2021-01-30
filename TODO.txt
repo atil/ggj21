@@ -8,17 +8,30 @@
   - one time only text
  - interaction to show text
 - OnRoomEntered trigger
-
-+TODO+
 - OnNewRoomEntered trigger
 - doors
   - open doors
   - polish 
-- halkalari parlatma
 
++TODO+
+- halkalari parlatma
+- text UI
+  - font
+  - bg image
+- build pipeline
+- sfx
+  - walk
+  - traverse
+- riddle texts
+- rooms
+  - connections
+  - text triggers
+  - sfx triggers (new room etc.)
+- win state
+- splash
 
 +POLISH+
-
+- room props
 - exclamation mark trigger
 - character animations
-- sound effects
+

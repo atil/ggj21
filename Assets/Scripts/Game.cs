@@ -12,7 +12,7 @@ public enum PlayerFadeType
 public class Game : MonoBehaviour
 {
     public Player Player;
-
+    public Sfx Sfx;
     public Room CurrentRoom;
     public GridLayout Grid;
 
@@ -63,6 +63,9 @@ public class Game : MonoBehaviour
     {
         float traverseDuration = targetRoom == CurrentRoom ? TraverseDuration * 2f : TraverseDuration;
         StartCoroutine(TeleportPlayer(direction, targetRoom, traverseDuration));
+
+        Debug.Log("Traversing");
+        Sfx.TraverseEffect(traverseDuration);
         
         if (targetRoom != null)
         {
