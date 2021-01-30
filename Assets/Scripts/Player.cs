@@ -54,7 +54,30 @@ public class Player : MonoBehaviour
         transform.position += (Vector3)_velocity;
 
         Collider2D[] colliders = Physics2D.OverlapBoxAll(transform.position, _collider.size, 0);
+        HandleTriggers(colliders);
 
+        foreach (Collider2D c in colliders)
+        {
+            if (c == _collider
+                || c.gameObject.layer == LayerMask.NameToLayer("Trigger"))
+            {
+                continue;
+            }
+
+            ColliderDistance2D dist = c.Distance(_collider);
+            Vector2 penet = dist.distance * dist.normal;
+            transform.position -= (Vector3)penet;
+            _velocity = Vector2.zero;
+        }
+    }
+
+    private void ClampIntoBounds()
+    {
+        // TODO: Start from here
+    }
+
+    private void HandleTriggers(Collider2D[] colliders)
+    {
         bool isInTraverseTrigger = false;
         foreach (Collider2D c in colliders)
         {
@@ -72,20 +95,5 @@ public class Player : MonoBehaviour
         {
             _canTraverse = true;
         }
-
-        foreach (Collider2D c in colliders)
-        {
-            if (c == _collider
-                || c.gameObject.layer == LayerMask.NameToLayer("Trigger"))
-            {
-                continue;
-            }
-
-            ColliderDistance2D dist = c.Distance(_collider);
-            Vector2 penet = dist.distance * dist.normal;
-            transform.position -= (Vector3)penet;
-            _velocity = Vector2.zero;
-        }
-
     }
 }

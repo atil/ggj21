@@ -60,7 +60,7 @@ public class Game : MonoBehaviour
                 cellPos = new Vector3Int(cellPos.x, 5, 0);
                 break;
             case TraverseDirection.Left:
-                cellPos = new Vector3Int(5, cellPos.y, 0);
+                cellPos = new Vector3Int(4, cellPos.y, 0);
                 break;
             case TraverseDirection.Right:
                 cellPos = new Vector3Int(-5, cellPos.y, 0);
