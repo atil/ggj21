@@ -74,7 +74,7 @@ public class Player : MonoBehaviour
     {
         Vector2 pos = transform.position;
         pos.x = Mathf.Clamp(pos.x, -5.4f, 3.4f);
-        pos.y = Mathf.Clamp(pos.y, -4.4f, 3.4f);
+        pos.y = Mathf.Clamp(pos.y, -4.4f, 4.4f);
         transform.position = pos;
     }
 
