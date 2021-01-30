@@ -39,7 +39,6 @@ public class Game : MonoBehaviour
 
     public void Traverse(TraverseDirection direction)
     {
-        Debug.Log($"traverse triggered: {direction}");
         switch (direction)
         {
             case TraverseDirection.Up:

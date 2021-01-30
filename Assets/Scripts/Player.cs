@@ -1,15 +1,18 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
 [RequireComponent(typeof(BoxCollider2D))]
 public class Player : MonoBehaviour
 {
-    public float Acceleration = 1f;
-    public float Friction = 1.1f;
     public Game Game;
-
+    public AnimationCurve MovementCurve;
+    
     private BoxCollider2D _collider;
     private bool _canTraverse = true;
-    private Vector2 _velocity;
+
+    private bool _isMoving;
+    private Coroutine _moveCoroutine;
 
     void Start()
     {
@@ -23,31 +26,22 @@ public class Player : MonoBehaviour
             return;
         }
 
-        float dt = Time.deltaTime;
         if (Input.GetKey(KeyCode.W))
         {
-            _velocity += Vector2.up * Acceleration * dt;
+            _moveCoroutine = StartCoroutine(MoveCoroutine(Vector2.up));
         }
         if (Input.GetKey(KeyCode.A))
         {
-            _velocity += Vector2.left * Acceleration * dt;
+            _moveCoroutine = StartCoroutine(MoveCoroutine(Vector2.left));
         }
         if (Input.GetKey(KeyCode.S))
         {
-            _velocity += Vector2.down * Acceleration * dt;
+            _moveCoroutine = StartCoroutine(MoveCoroutine(Vector2.down));
         }
         if (Input.GetKey(KeyCode.D))
         {
-            _velocity += Vector2.right * Acceleration * dt;
+            _moveCoroutine = StartCoroutine(MoveCoroutine(Vector2.right));
         }
-
-        _velocity /= Friction;
-        if (_velocity.sqrMagnitude < 0.000001f)
-        {
-            _velocity = Vector2.zero;
-        }
-
-        transform.position += (Vector3)_velocity;
 
         Collider2D[] colliders = Physics2D.OverlapBoxAll(transform.position, _collider.size, 0);
         HandleTriggers(colliders);
@@ -63,10 +57,32 @@ public class Player : MonoBehaviour
             ColliderDistance2D dist = c.Distance(_collider);
             Vector2 penet = dist.distance * dist.normal;
             transform.position -= (Vector3)penet;
-            _velocity = Vector2.zero;
         }
 
         ClampIntoBounds();
+    }
+
+    private IEnumerator MoveCoroutine(Vector2 dir)
+    {
+        if (_isMoving)
+        {
+            yield break;
+        }
+
+        _isMoving = true;
+
+        Vector2 src = transform.position;
+        Vector2 target = (Vector2)transform.position + dir * 1f;
+        const float duration = 0.15f;
+        for (float f = 0; f < duration; f += Time.deltaTime)
+        {
+            float t = MovementCurve.Evaluate(f / duration);
+            transform.position = Vector2.Lerp(src, target, t);
+            yield return null;
+        }
+
+        transform.position = target;
+        _isMoving = false;
     }
 
     private void ClampIntoBounds()
@@ -88,8 +104,11 @@ public class Player : MonoBehaviour
                 if (_canTraverse)
                 {
                     _canTraverse = false;
+                    if (_moveCoroutine != null)
+                    {
+                        StopCoroutine(_moveCoroutine);
+                    }
                     Game.Traverse(traverseTrigger.Direction);
-                    _velocity = Vector2.zero;
                 }
             }
         }
