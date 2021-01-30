@@ -30,20 +30,16 @@ public class Game : MonoBehaviour
         switch (direction)
         {
             case TraverseDirection.Up:
-                StartCoroutine(TeleportPlayer(direction, CurrentRoom.RoomUp));
-                StartCoroutine(DoRoomTransition(CurrentRoom.RoomUp, RoomTargetDown, RoomTargetUp));
+                StartCoroutine(TraverseCoroutine(direction, CurrentRoom.RoomUp, RoomTargetDown, RoomTargetUp));
                 break;
             case TraverseDirection.Down:
-                StartCoroutine(TeleportPlayer(direction, CurrentRoom.RoomDown));
-                StartCoroutine(DoRoomTransition(CurrentRoom.RoomDown, RoomTargetUp, RoomTargetDown));
+                StartCoroutine(TraverseCoroutine(direction, CurrentRoom.RoomDown, RoomTargetUp, RoomTargetDown));
                 break;
             case TraverseDirection.Left:
-                StartCoroutine(TeleportPlayer(direction, CurrentRoom.RoomLeft));
-                StartCoroutine(DoRoomTransition(CurrentRoom.RoomLeft, RoomTargetRight, RoomTargetLeft));
+                StartCoroutine(TraverseCoroutine(direction, CurrentRoom.RoomLeft, RoomTargetRight, RoomTargetLeft));
                 break;
             case TraverseDirection.Right:
-                StartCoroutine(TeleportPlayer(direction, CurrentRoom.RoomRight));
-                StartCoroutine(DoRoomTransition(CurrentRoom.RoomRight, RoomTargetLeft, RoomTargetRight));
+                StartCoroutine(TraverseCoroutine(direction, CurrentRoom.RoomRight, RoomTargetLeft, RoomTargetRight));
                 break;
             default:
                 Debug.LogError($"Undefined traverse direction {direction}");
@@ -51,11 +47,11 @@ public class Game : MonoBehaviour
         }
     }
 
-    private IEnumerator TeleportPlayer(TraverseDirection direction, Room targetRoom)
+    private IEnumerator TeleportPlayer(TraverseDirection direction, Room targetRoom, float traverseDuration)
     {
         Player.transform.SetParent(CurrentRoom.transform);
-        StartCoroutine(FadePlayer(PlayerFadeType.Hide, TraverseDuration * 0.3f));
-        yield return new WaitForSeconds(TraverseDuration / 2f);
+        StartCoroutine(FadePlayer(PlayerFadeType.Hide, traverseDuration * 0.3f));
+        yield return new WaitForSeconds(traverseDuration / 2f);
         Vector3 offset = new Vector3(0.49f, -0.49f, 0.0f);
         Vector3Int cellPos = Grid.WorldToCell(Player.transform.position + offset);
         
@@ -77,8 +73,8 @@ public class Game : MonoBehaviour
 
         Player.transform.localPosition = Grid.CellToWorld(cellPos) - offset;
         Player.transform.SetParent(targetRoom.transform, false);
-        StartCoroutine(FadePlayer(PlayerFadeType.Show, TraverseDuration * 0.3f));
-        yield return new WaitForSeconds(TraverseDuration / 2f);
+        StartCoroutine(FadePlayer(PlayerFadeType.Show, traverseDuration * 0.3f));
+        yield return new WaitForSeconds(traverseDuration / 2f);
         Player.transform.SetParent(null);
         CurrentRoom.OnRoomEnter(direction);
     }
@@ -98,17 +94,23 @@ public class Game : MonoBehaviour
         }
     }
 
-    private IEnumerator DoRoomTransition(Room targetRoom, Transform currentRoomTarget, Transform destinationRoomTarget)
+    private IEnumerator TraverseCoroutine(TraverseDirection direction, Room targetRoom, Transform currentRoomTarget, Transform destinationRoomTarget)
     {
-        IsTraversing = true;
+        float traverseDuration = targetRoom == CurrentRoom ? TraverseDuration * 2f : TraverseDuration;
+        StartCoroutine(TeleportPlayer(direction, targetRoom, traverseDuration));
+        
         if (targetRoom != null)
         {
             if (targetRoom == CurrentRoom)
             {
-                StartCoroutine(DoSameRoomTransition(currentRoomTarget, destinationRoomTarget));
+                IsTraversing = true;
+                yield return StartCoroutine(RoomMoveCoroutine(CurrentRoom, RoomTargetMiddle, currentRoomTarget, true, true));
+                yield return StartCoroutine(RoomMoveCoroutine(CurrentRoom, destinationRoomTarget, RoomTargetMiddle, true, true));
+                IsTraversing = false;
             }
             else // Different room
             {
+                IsTraversing = true;
                 StartCoroutine(RoomMoveCoroutine(CurrentRoom, RoomTargetMiddle, currentRoomTarget, true, false));
                 StartCoroutine(RoomMoveCoroutine(targetRoom, destinationRoomTarget, RoomTargetMiddle, true, true));
                 StartCoroutine(CoverCoroutine(targetRoom));
@@ -122,14 +124,6 @@ public class Game : MonoBehaviour
             Debug.LogError($"No target room defined for room {CurrentRoom}");
         }
     }
-
-    private IEnumerator DoSameRoomTransition(Transform currentRoomTarget, Transform destinationRoomTarget)
-    {
-        Debug.Log($"same room transition. current target {currentRoomTarget}  ==  destination:: {destinationRoomTarget}");
-        yield return StartCoroutine(RoomMoveCoroutine(CurrentRoom, RoomTargetMiddle, currentRoomTarget, true, true));
-        yield return StartCoroutine(RoomMoveCoroutine(CurrentRoom, destinationRoomTarget, RoomTargetMiddle, true, true));
-        IsTraversing = false;
-    } 
 
     private IEnumerator CoverCoroutine(Room targetRoom)
     {

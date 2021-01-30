@@ -1,5 +1,6 @@
 +DONE+
 - transition
+  - self room transition
   - transition polish
 -text
  - show text UI

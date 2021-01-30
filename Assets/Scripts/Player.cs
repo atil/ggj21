@@ -73,7 +73,7 @@ public class Player : MonoBehaviour
     private void ClampIntoBounds()
     {
         Vector2 pos = transform.position;
-        pos.x = Mathf.Clamp(pos.x, -5.4f, 3.4f);
+        pos.x = Mathf.Clamp(pos.x, -5.4f, 4.4f);
         pos.y = Mathf.Clamp(pos.y, -4.4f, 4.4f);
         transform.position = pos;
     }
@@ -90,6 +90,7 @@ public class Player : MonoBehaviour
                 {
                     _canTraverse = false;
                     Game.Traverse(traverseTrigger.Direction);
+                    _velocity = Vector2.zero;
                 }
             }
         }
