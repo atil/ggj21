@@ -2,6 +2,11 @@
 using System.Collections;
 using UnityEngine;
 
+public enum PlayerFadeType
+{
+    Show, Hide
+}
+
 public class Game : MonoBehaviour
 {
     public Player Player;
@@ -49,6 +54,7 @@ public class Game : MonoBehaviour
     private IEnumerator TeleportPlayer(TraverseDirection direction, Room targetRoom)
     {
         Player.transform.SetParent(CurrentRoom.transform);
+        StartCoroutine(FadePlayer(PlayerFadeType.Hide, TraverseDuration * 0.3f));
         yield return new WaitForSeconds(TraverseDuration / 2f);
         Vector3Int cellPos = Grid.WorldToCell(Player.transform.position);
         switch (direction)
@@ -69,8 +75,24 @@ public class Game : MonoBehaviour
 
         Player.transform.localPosition = Grid.CellToWorld(cellPos) + new Vector3(-0.5f, 0.5f, 0);
         Player.transform.SetParent(targetRoom.transform, false);
+        StartCoroutine(FadePlayer(PlayerFadeType.Show, TraverseDuration * 0.3f));
         yield return new WaitForSeconds(TraverseDuration / 2f);
         Player.transform.SetParent(null);
+    }
+
+    private IEnumerator FadePlayer(PlayerFadeType type, float duration)
+    {
+        SpriteRenderer renderer = Player.GetComponent<SpriteRenderer>();
+        float srcAlpha = type == PlayerFadeType.Show ? 0f : 1f;
+        float targetAlpha = type == PlayerFadeType.Show ? 1f : 0f;
+
+        for (float f = 0; f < duration; f += Time.deltaTime)
+        {
+            Color c = renderer.color;
+            c.a = Mathf.Lerp(srcAlpha, targetAlpha, f / duration);
+            renderer.color = c;
+            yield return null;
+        }
     }
 
     private IEnumerator DoRoomTransition(Room targetRoom, Transform currentRoomTarget, Transform destinationRoomTarget)

@@ -69,11 +69,16 @@ public class Player : MonoBehaviour
             transform.position -= (Vector3)penet;
             _velocity = Vector2.zero;
         }
+
+        ClampIntoBounds();
     }
 
     private void ClampIntoBounds()
     {
-        // TODO: Start from here
+        Vector2 pos = transform.position;
+        pos.x = Mathf.Clamp(pos.x, -5.4f, 3.4f);
+        pos.y = Mathf.Clamp(pos.y, -4.4f, 3.4f);
+        transform.position = pos;
     }
 
     private void HandleTriggers(Collider2D[] colliders)
