@@ -6,7 +6,6 @@ public class Player : MonoBehaviour
     public float Acceleration = 1f;
     public float Friction = 1.1f;
     public Game Game;
-    public float TraverseDuration = 1f;
 
     private BoxCollider2D _collider;
     private bool _canTraverse = true;
