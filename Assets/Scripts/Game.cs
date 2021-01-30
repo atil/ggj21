@@ -47,6 +47,37 @@ public class Game : MonoBehaviour
         }
     }
 
+    private IEnumerator TraverseCoroutine(TraverseDirection direction, Room targetRoom, Transform currentRoomTarget, Transform destinationRoomTarget)
+    {
+        float traverseDuration = targetRoom == CurrentRoom ? TraverseDuration * 2f : TraverseDuration;
+        StartCoroutine(TeleportPlayer(direction, targetRoom, traverseDuration));
+        
+        if (targetRoom != null)
+        {
+            if (targetRoom == CurrentRoom)
+            {
+                IsTraversing = true;
+                yield return StartCoroutine(RoomMoveCoroutine(CurrentRoom, RoomTargetMiddle, currentRoomTarget, true, true));
+                yield return StartCoroutine(RoomMoveCoroutine(CurrentRoom, destinationRoomTarget, RoomTargetMiddle, true, true));
+                IsTraversing = false;
+            }
+            else // Different room
+            {
+                IsTraversing = true;
+                StartCoroutine(RoomMoveCoroutine(CurrentRoom, RoomTargetMiddle, currentRoomTarget, true, false));
+                StartCoroutine(RoomMoveCoroutine(targetRoom, destinationRoomTarget, RoomTargetMiddle, true, true));
+                StartCoroutine(CoverCoroutine(targetRoom));
+                CurrentRoom = targetRoom;
+                yield return new WaitForSeconds(TraverseDuration);
+                IsTraversing = false;
+            }
+        }
+        else
+        {
+            Debug.LogError($"No target room defined for room {CurrentRoom}");
+        }
+    }
+
     private IEnumerator TeleportPlayer(TraverseDirection direction, Room targetRoom, float traverseDuration)
     {
         Player.transform.SetParent(CurrentRoom.transform);
@@ -91,37 +122,6 @@ public class Game : MonoBehaviour
             c.a = Mathf.Lerp(srcAlpha, targetAlpha, f / duration);
             renderer.color = c;
             yield return null;
-        }
-    }
-
-    private IEnumerator TraverseCoroutine(TraverseDirection direction, Room targetRoom, Transform currentRoomTarget, Transform destinationRoomTarget)
-    {
-        float traverseDuration = targetRoom == CurrentRoom ? TraverseDuration * 2f : TraverseDuration;
-        StartCoroutine(TeleportPlayer(direction, targetRoom, traverseDuration));
-        
-        if (targetRoom != null)
-        {
-            if (targetRoom == CurrentRoom)
-            {
-                IsTraversing = true;
-                yield return StartCoroutine(RoomMoveCoroutine(CurrentRoom, RoomTargetMiddle, currentRoomTarget, true, true));
-                yield return StartCoroutine(RoomMoveCoroutine(CurrentRoom, destinationRoomTarget, RoomTargetMiddle, true, true));
-                IsTraversing = false;
-            }
-            else // Different room
-            {
-                IsTraversing = true;
-                StartCoroutine(RoomMoveCoroutine(CurrentRoom, RoomTargetMiddle, currentRoomTarget, true, false));
-                StartCoroutine(RoomMoveCoroutine(targetRoom, destinationRoomTarget, RoomTargetMiddle, true, true));
-                StartCoroutine(CoverCoroutine(targetRoom));
-                CurrentRoom = targetRoom;
-                yield return new WaitForSeconds(TraverseDuration);
-                IsTraversing = false;
-            }
-        }
-        else
-        {
-            Debug.LogError($"No target room defined for room {CurrentRoom}");
         }
     }
 
