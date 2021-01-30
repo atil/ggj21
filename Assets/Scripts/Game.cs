@@ -26,6 +26,7 @@ public class Game : MonoBehaviour
 
     public void Traverse(TraverseDirection direction)
     {
+        Debug.Log($"traverse triggered: {direction}");
         switch (direction)
         {
             case TraverseDirection.Up:
@@ -57,7 +58,7 @@ public class Game : MonoBehaviour
         yield return new WaitForSeconds(TraverseDuration / 2f);
         Vector3 offset = new Vector3(0.49f, -0.49f, 0.0f);
         Vector3Int cellPos = Grid.WorldToCell(Player.transform.position + offset);
-        Debug.Log(Player.transform.position);
+        
         switch (direction)
         {
             case TraverseDirection.Up:
@@ -102,18 +103,33 @@ public class Game : MonoBehaviour
         IsTraversing = true;
         if (targetRoom != null)
         {
-            StartCoroutine(RoomMoveCoroutine(CurrentRoom, RoomTargetMiddle, currentRoomTarget, true, false));
-            StartCoroutine(RoomMoveCoroutine(targetRoom, destinationRoomTarget, RoomTargetMiddle, true, true));
-            StartCoroutine(CoverCoroutine(targetRoom));
-            CurrentRoom = targetRoom;
+            if (targetRoom == CurrentRoom)
+            {
+                StartCoroutine(DoSameRoomTransition(currentRoomTarget, destinationRoomTarget));
+            }
+            else // Different room
+            {
+                StartCoroutine(RoomMoveCoroutine(CurrentRoom, RoomTargetMiddle, currentRoomTarget, true, false));
+                StartCoroutine(RoomMoveCoroutine(targetRoom, destinationRoomTarget, RoomTargetMiddle, true, true));
+                StartCoroutine(CoverCoroutine(targetRoom));
+                CurrentRoom = targetRoom;
+                yield return new WaitForSeconds(TraverseDuration);
+                IsTraversing = false;
+            }
         }
         else
         {
             Debug.LogError($"No target room defined for room {CurrentRoom}");
         }
-        yield return new WaitForSeconds(TraverseDuration);
-        IsTraversing = false;
     }
+
+    private IEnumerator DoSameRoomTransition(Transform currentRoomTarget, Transform destinationRoomTarget)
+    {
+        Debug.Log($"same room transition. current target {currentRoomTarget}  ==  destination:: {destinationRoomTarget}");
+        yield return StartCoroutine(RoomMoveCoroutine(CurrentRoom, RoomTargetMiddle, currentRoomTarget, true, true));
+        yield return StartCoroutine(RoomMoveCoroutine(CurrentRoom, destinationRoomTarget, RoomTargetMiddle, true, true));
+        IsTraversing = false;
+    } 
 
     private IEnumerator CoverCoroutine(Room targetRoom)
     {
