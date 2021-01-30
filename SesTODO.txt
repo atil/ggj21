@@ -1,0 +1,8 @@
+- Background Music
+- Character Movement SFX
+- Small Achievement (Interaction) SFX
+- Big Achievement (Progression) SFX
+- Light Puzzle, Light On SFX
+- Light Puzzle, Lights Off/Reset SFX
+- Door Unlock SFX (optional, big achievement burada kullanilir)
+- End game theme
