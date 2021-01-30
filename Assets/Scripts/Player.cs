@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 [RequireComponent(typeof(BoxCollider2D))]
 public class Player : MonoBehaviour
@@ -28,41 +29,28 @@ public class Player : MonoBehaviour
 
         if (Input.GetKey(KeyCode.W))
         {
-            _moveCoroutine = StartCoroutine(MoveCoroutine(Vector2.up));
+            _moveCoroutine = StartCoroutine(MoveCoroutine(Vector2Int.up));
         }
         if (Input.GetKey(KeyCode.A))
         {
-            _moveCoroutine = StartCoroutine(MoveCoroutine(Vector2.left));
+            _moveCoroutine = StartCoroutine(MoveCoroutine(Vector2Int.left));
         }
         if (Input.GetKey(KeyCode.S))
         {
-            _moveCoroutine = StartCoroutine(MoveCoroutine(Vector2.down));
+            _moveCoroutine = StartCoroutine(MoveCoroutine(Vector2Int.down));
         }
         if (Input.GetKey(KeyCode.D))
         {
-            _moveCoroutine = StartCoroutine(MoveCoroutine(Vector2.right));
+            _moveCoroutine = StartCoroutine(MoveCoroutine(Vector2Int.right));
         }
 
         Collider2D[] colliders = Physics2D.OverlapBoxAll(transform.position, _collider.size, 0);
         HandleTriggers(colliders);
 
-        foreach (Collider2D c in colliders)
-        {
-            if (c == _collider
-                || c.gameObject.layer == LayerMask.NameToLayer("Trigger"))
-            {
-                continue;
-            }
-
-            ColliderDistance2D dist = c.Distance(_collider);
-            Vector2 penet = dist.distance * dist.normal;
-            transform.position -= (Vector3)penet;
-        }
-
         ClampIntoBounds();
     }
 
-    private IEnumerator MoveCoroutine(Vector2 dir)
+    private IEnumerator MoveCoroutine(Vector2Int dir)
     {
         if (_isMoving)
         {
@@ -70,9 +58,19 @@ public class Player : MonoBehaviour
         }
 
         _isMoving = true;
-
         Vector2 src = transform.position;
-        Vector2 target = (Vector2)transform.position + dir * 1f;
+        
+        Vector3 offset = new Vector3(0.49f, -0.49f, 0.0f);
+        Vector3Int cellPos = Game.Grid.WorldToCell(transform.position + offset);
+        cellPos += (Vector3Int) dir;
+        Vector2 target = Game.Grid.CellToWorld(cellPos) - offset;
+        TilemapCollider2D currentCollider = Game.CurrentRoom.transform.Find("Collision").GetComponent<TilemapCollider2D>();
+        if (currentCollider.OverlapPoint(target))
+        {
+            _isMoving = false; // Can't move into the collider
+            yield break;
+        }
+
         const float duration = 0.15f;
         for (float f = 0; f < duration; f += Time.deltaTime)
         {
