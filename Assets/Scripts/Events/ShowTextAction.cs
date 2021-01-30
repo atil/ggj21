@@ -32,7 +32,7 @@ public class ShowTextAction : EventAction
         _hasShown = false;
     }
     
-    public override void Call(RoomEnteranceDirection direction)
+    public override void Call(RoomEnteranceDirection direction, bool isFirstEntry)
     {
         if (CallOnEntranceDirection > 0 && direction != CallOnEntranceDirection)
         {

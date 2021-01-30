@@ -13,6 +13,7 @@ public enum RoomEnteranceDirection
 
 public class Room : MonoBehaviour
 {
+    public string RoomId;
     public Room RoomUp;
     public Room RoomDown;
     public Room RoomLeft;
@@ -20,7 +21,7 @@ public class Room : MonoBehaviour
 
     public List<EventAction> EventActionsOnEnter;
     
-    public void OnRoomEnter(TraverseDirection direction)
+    public void OnRoomEnter(TraverseDirection direction, bool isFirstEntry)
     {
         foreach (var e in EventActionsOnEnter)
         {

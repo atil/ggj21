@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public enum PlayerFadeType
@@ -21,8 +23,16 @@ public class Game : MonoBehaviour
 
     public AnimationCurve TraverseCurve;
     public float TraverseDuration = 1f;
-
+    
     public bool IsTraversing { get; private set; }
+
+    public List<string> TravelHistory;
+    
+    private void Start()
+    {
+        TravelHistory = new List<string>();
+        TravelHistory.Add(CurrentRoom.RoomId);
+    }
 
     public void Traverse(TraverseDirection direction)
     {
@@ -59,6 +69,7 @@ public class Game : MonoBehaviour
                 IsTraversing = true;
                 yield return StartCoroutine(RoomMoveCoroutine(CurrentRoom, RoomTargetMiddle, currentRoomTarget, true, true));
                 yield return StartCoroutine(RoomMoveCoroutine(CurrentRoom, destinationRoomTarget, RoomTargetMiddle, true, true));
+                ChangeCurrentRoom(targetRoom);
                 IsTraversing = false;
             }
             else // Different room
@@ -67,7 +78,7 @@ public class Game : MonoBehaviour
                 StartCoroutine(RoomMoveCoroutine(CurrentRoom, RoomTargetMiddle, currentRoomTarget, true, false));
                 StartCoroutine(RoomMoveCoroutine(targetRoom, destinationRoomTarget, RoomTargetMiddle, true, true));
                 StartCoroutine(CoverCoroutine(targetRoom));
-                CurrentRoom = targetRoom;
+                ChangeCurrentRoom(targetRoom);
                 yield return new WaitForSeconds(TraverseDuration);
                 IsTraversing = false;
             }
@@ -76,6 +87,12 @@ public class Game : MonoBehaviour
         {
             Debug.LogError($"No target room defined for room {CurrentRoom}");
         }
+    }
+
+    private void ChangeCurrentRoom(Room targetRoom)
+    {
+        CurrentRoom = targetRoom;
+        TravelHistory.Add(CurrentRoom.RoomId);
     }
 
     private IEnumerator TeleportPlayer(TraverseDirection direction, Room targetRoom, float traverseDuration)
@@ -107,7 +124,13 @@ public class Game : MonoBehaviour
         StartCoroutine(FadePlayer(PlayerFadeType.Show, traverseDuration * 0.3f));
         yield return new WaitForSeconds(traverseDuration / 2f);
         Player.transform.SetParent(null);
-        CurrentRoom.OnRoomEnter(direction);
+        var isFirstEntry = IsFirstEntry(CurrentRoom.RoomId);
+        CurrentRoom.OnRoomEnter(direction, isFirstEntry);
+    }
+
+    private bool IsFirstEntry(string roomId = "")
+    {
+        return TravelHistory.Contains(roomId);
     }
 
     private IEnumerator FadePlayer(PlayerFadeType type, float duration)

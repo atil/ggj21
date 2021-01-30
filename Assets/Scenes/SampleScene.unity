@@ -872,6 +872,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 910216773481203014, guid: 5a13022557472f04fb0c761cf8eac40a,
         type: 3}
+      propertyPath: RoomId
+      value: B
+      objectReference: {fileID: 0}
+    - target: {fileID: 910216773481203014, guid: 5a13022557472f04fb0c761cf8eac40a,
+        type: 3}
       propertyPath: RoomLeft
       value: 
       objectReference: {fileID: 1370354318}
@@ -1167,6 +1172,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   TraverseDuration: 1
+  TravelHistory: []
 --- !u!4 &501087361
 Transform:
   m_ObjectHideFlags: 0
@@ -1950,6 +1956,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 910216773481203014, guid: 5a13022557472f04fb0c761cf8eac40a,
         type: 3}
+      propertyPath: RoomId
+      value: C
+      objectReference: {fileID: 0}
+    - target: {fileID: 910216773481203014, guid: 5a13022557472f04fb0c761cf8eac40a,
+        type: 3}
       propertyPath: RoomDown
       value: 
       objectReference: {fileID: 1370354318}
@@ -2075,7 +2086,7 @@ MonoBehaviour:
   Text: Ayni oda amk
   ShowOnUp: 0
   ShowDuration: 1
-  ShowOnce: 0
+  ShowOnce: 1
   TextUpGo: {fileID: 1974821152}
   TextBottomGo: {fileID: 1667747096}
 --- !u!1 &781515771
@@ -3519,6 +3530,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 910216773481203014, guid: 5a13022557472f04fb0c761cf8eac40a,
+        type: 3}
+      propertyPath: RoomId
+      value: A
       objectReference: {fileID: 0}
     - target: {fileID: 910216773481203014, guid: 5a13022557472f04fb0c761cf8eac40a,
         type: 3}
