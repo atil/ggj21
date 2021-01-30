@@ -1,9 +1,23 @@
++DONE+
 - transition
-  - polish
-- show text UI
-- interaction to show text
+-text
+ - show text UI
+ - interaction to show text
+
++TODO+
+- OnNewRoomEntered trigger
+- OnRoomEntered trigger
+- text
+  - triggerable text
+  - one time only text
 - doors
   - open doors
-
-later
+  -polish 
 - halkalari parlatma
+
+
++POLISH+
+- transition polish
+- exclamation mark trigger
+- character animations
+- sound effects
