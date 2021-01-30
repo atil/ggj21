@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public enum PlayerFadeType
@@ -28,10 +29,12 @@ public class Game : MonoBehaviour
 
     public List<string> TravelHistory;
     
+    private bool _isFirstEntry;
+    
     private void Start()
     {
         TravelHistory = new List<string>();
-        TravelHistory.Add(CurrentRoom.RoomId);
+        _isFirstEntry = true;
     }
 
     public void Traverse(TraverseDirection direction)
@@ -92,6 +95,7 @@ public class Game : MonoBehaviour
     private void ChangeCurrentRoom(Room targetRoom)
     {
         CurrentRoom = targetRoom;
+        _isFirstEntry = IsFirstEntry(CurrentRoom.RoomId);
         TravelHistory.Add(CurrentRoom.RoomId);
     }
 
@@ -124,13 +128,12 @@ public class Game : MonoBehaviour
         StartCoroutine(FadePlayer(PlayerFadeType.Show, traverseDuration * 0.3f));
         yield return new WaitForSeconds(traverseDuration / 2f);
         Player.transform.SetParent(null);
-        var isFirstEntry = IsFirstEntry(CurrentRoom.RoomId);
-        CurrentRoom.OnRoomEnter(direction, isFirstEntry);
+        CurrentRoom.OnRoomEnter(direction, _isFirstEntry);
     }
 
     private bool IsFirstEntry(string roomId = "")
     {
-        return TravelHistory.Contains(roomId);
+        return !TravelHistory.Contains(roomId);
     }
 
     private IEnumerator FadePlayer(PlayerFadeType type, float duration)
