@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 
 public enum PlayerFadeType
@@ -78,6 +77,7 @@ public class Game : MonoBehaviour
         StartCoroutine(FadePlayer(PlayerFadeType.Show, TraverseDuration * 0.3f));
         yield return new WaitForSeconds(TraverseDuration / 2f);
         Player.transform.SetParent(null);
+        CurrentRoom.OnRoomEnter(direction);
     }
 
     private IEnumerator FadePlayer(PlayerFadeType type, float duration)

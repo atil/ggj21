@@ -1,5 +1,6 @@
 +DONE+
 - transition
+  - transition polish
 -text
  - show text UI
  - interaction to show text
@@ -12,12 +13,12 @@
   - one time only text
 - doors
   - open doors
-  -polish 
+  - polish 
 - halkalari parlatma
 
 
 +POLISH+
-- transition polish
+
 - exclamation mark trigger
 - character animations
 - sound effects
