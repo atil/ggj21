@@ -24,7 +24,7 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        if (Game.IsTraversing)
+        if (Game.IsTraversing && Game.EndGameTriggered)
         {
             return;
         }

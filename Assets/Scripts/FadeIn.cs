@@ -22,7 +22,10 @@ public class FadeIn : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        StartCoroutine(FadeInScene());
+        if (scene.name == "SampleScene")
+        {
+            StartCoroutine(FadeInScene());
+        }
     }
     
     IEnumerator FadeInScene()
@@ -30,13 +33,17 @@ public class FadeIn : MonoBehaviour
         var interval = _currTime / FadeOutDuration;
         yield return new WaitForSeconds(FadeOutInterval);
         _currTime += FadeOutInterval;
-        Image.color = new Color(0, 0, 0, 1 - Mathf.Lerp(0, 1, _currTime));
+        var c = Image.color;
+        c.a = 1 - Mathf.Lerp(0, 1, _currTime);
+        Image.color = c;
         Audio1.volume = Mathf.Lerp(0, 1, _currTime);
         Audio2.volume = Mathf.Lerp(0, 1, _currTime);
 
         if (_currTime >= FadeOutDuration)
         {
-            Image.color = new Color(0, 0, 0 , 0);
+            c = Image.color;
+            c.a = 0;
+            Image.color = c;
             Audio1.volume = 1;
             Audio2.volume = 1;
         }

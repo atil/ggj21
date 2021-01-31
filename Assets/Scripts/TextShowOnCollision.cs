@@ -9,6 +9,8 @@ public class TextShowOnCollision : MonoBehaviour
     public AudioSource Sound;
     public bool PlayOnce;
 
+    public BoxCollider2D TriggerToEnable = null;
+
     private GameObject _textParent;
     private TextMeshProUGUI _textUI;
     private BoxCollider2D _collider;
@@ -53,6 +55,10 @@ public class TextShowOnCollision : MonoBehaviour
             {
                 Sound.Play();
                 _isPlayed = true;
+                if (TriggerToEnable != null)
+                {
+                    TriggerToEnable.gameObject.SetActive(true);
+                }
             }
         }
 

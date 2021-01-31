@@ -1,8 +1,9 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class EndGameTrigger : EventAction
+public class EndGameTrigger : MonoBehaviour
 {
     public Game Game;
     public Image Cover;
@@ -12,14 +13,43 @@ public class EndGameTrigger : EventAction
     
     public AnimationCurve FadeOutCurve;
     
-    public override void Call(RoomEnteranceDirection direction = RoomEnteranceDirection.Any, bool isFirstEntry = false)
+    private BoxCollider2D _collider;
+    
+    private bool _isPlayed = false;
+    
+    void Start()
     {
-        Game.EndGameTriggered = true;
-        Game.StartCoroutine(FadeOutCoroutine());
+        _collider = GetComponent<BoxCollider2D>();
+        _isPlayed = false;
     }
+    
+    private void Update()
+    {
+        if (_isPlayed)
+        {
+            return;
+        }
+        
+        Collider2D[] colliders = Physics2D.OverlapBoxAll(transform.position, _collider.size , 0);
+        foreach (Collider2D c in colliders)
+        {
+            if (c == _collider)
+            {
+                continue;
+            }
 
+            if (c.name == "Player")
+            {
+                _isPlayed = true;
+                StartCoroutine(FadeOutCoroutine());
+            }
+        }
+    }
+    
     private IEnumerator FadeOutCoroutine()
     {
+        Game.EndGameTriggered = true;
+        yield return new WaitForSeconds(2f);
         float srcVol = MusicSource.volume;
         float targetVol = 0f;
         float srcAlpha = 0f;
@@ -38,5 +68,7 @@ public class EndGameTrigger : EventAction
             
             yield return null;
         }
+
+        SceneManager.LoadScene("Splash");
     }
 }

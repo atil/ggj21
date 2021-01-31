@@ -5466,6 +5466,12 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &146453582 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 5162172688346046075, guid: baafad4748333234f9c9b281de1cb7fa,
+    type: 3}
+  m_PrefabInstance: {fileID: 923554018}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &160510529
 GameObject:
   m_ObjectHideFlags: 0
@@ -18434,6 +18440,11 @@ PrefabInstance:
       propertyPath: Sound
       value: 
       objectReference: {fileID: 1887715976}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: TriggerToEnable
+      value: 
+      objectReference: {fileID: 146453582}
     - target: {fileID: 5162172688346046074, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
       propertyPath: m_RootOrder
@@ -27232,6 +27243,11 @@ PrefabInstance:
       propertyPath: Sound
       value: 
       objectReference: {fileID: 1887715976}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: TriggerToEnable
+      value: 
+      objectReference: {fileID: 1707326378}
     - target: {fileID: 5162172688346046074, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
       propertyPath: m_RootOrder
@@ -27297,10 +27313,20 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046075, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5162172688346046077, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
       propertyPath: m_Name
       value: TextTriggerMap
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046077, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: baafad4748333234f9c9b281de1cb7fa, type: 3}
@@ -31567,7 +31593,7 @@ GameObject:
   - component: {fileID: 1287716159}
   - component: {fileID: 1287716158}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Cover
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31605,7 +31631,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.2, g: 0.105882354, b: 0.2, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -46150,11 +46176,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a61b2a1cd47240f692afb7364c81ebab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CallOnEntranceDirection: 0
   Game: {fileID: 501087360}
-  Cover: {fileID: 0}
+  Cover: {fileID: 1287716158}
   MusicSource: {fileID: 519420030}
-  RhythmSource: {fileID: 519420030}
+  RhythmSource: {fileID: 519420034}
   FadeOutCurve:
     serializedVersion: 2
     m_Curve:
@@ -46179,6 +46204,12 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!61 &1707326378 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 5162172688346046075, guid: baafad4748333234f9c9b281de1cb7fa,
+    type: 3}
+  m_PrefabInstance: {fileID: 1941003889}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1722734502
 GameObject:
   m_ObjectHideFlags: 0
@@ -56042,10 +56073,20 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046075, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5162172688346046077, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
       propertyPath: m_Name
       value: TextTriggerCrown
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046077, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: baafad4748333234f9c9b281de1cb7fa, type: 3}
@@ -64027,7 +64068,7 @@ PrefabInstance:
         type: 3}
       propertyPath: RoomRight
       value: 
-      objectReference: {fileID: 305205978}
+      objectReference: {fileID: 1370354318}
     - target: {fileID: 910216773481203014, guid: 5a13022557472f04fb0c761cf8eac40a,
         type: 3}
       propertyPath: EventActionsOnEnter.Array.size
