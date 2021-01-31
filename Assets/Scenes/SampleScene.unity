@@ -7667,7 +7667,7 @@ MonoBehaviour:
   - H
   Game: {fileID: 501087360}
   DefaultIconColor: {r: 0.07450981, g: 0.1254902, b: 0.12941177, a: 1}
-  ActiveIconColor: {r: 0.44705886, g: 0.43529415, b: 0.6313726, a: 1}
+  ActiveIconColor: {r: 0.9568628, g: 0.7058824, b: 0.10588236, a: 1}
 --- !u!1 &324743370
 GameObject:
   m_ObjectHideFlags: 0
@@ -16259,7 +16259,7 @@ MonoBehaviour:
   - H
   Game: {fileID: 501087360}
   DefaultIconColor: {r: 0.07450981, g: 0.1254902, b: 0.12941177, a: 1}
-  ActiveIconColor: {r: 0.44705886, g: 0.43529415, b: 0.6313726, a: 1}
+  ActiveIconColor: {r: 0.9568628, g: 0.7058824, b: 0.10588236, a: 1}
 --- !u!1001 &865066016
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24636,7 +24636,7 @@ MonoBehaviour:
   - H
   Game: {fileID: 501087360}
   DefaultIconColor: {r: 0.07450981, g: 0.1254902, b: 0.12941177, a: 1}
-  ActiveIconColor: {r: 0.44705886, g: 0.43529415, b: 0.6313726, a: 1}
+  ActiveIconColor: {r: 0.9568628, g: 0.7058824, b: 0.10588236, a: 1}
 --- !u!1001 &1641875818
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -52326,6 +52326,11 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 7197198583655951043, guid: 5a13022557472f04fb0c761cf8eac40a,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 7768847536546179245, guid: 5a13022557472f04fb0c761cf8eac40a,
         type: 3}
       propertyPath: m_RootOrder
