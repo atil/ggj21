@@ -9,11 +9,6 @@ public class OpenDoorAction : EventAction
 	
 	public override void Call(RoomEnteranceDirection direction, bool isFirstEntry)
 	{
-		if (!isFirstEntry)
-		{
-			return;
-		}
-		
 		if (CallOnEntranceDirection > 0 && direction != CallOnEntranceDirection)
 		{
 			return;
