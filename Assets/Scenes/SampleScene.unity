@@ -12654,16 +12654,6 @@ PrefabInstance:
       propertyPath: Text
       value: Hello
       objectReference: {fileID: 0}
-    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
-        type: 3}
-      propertyPath: Sound
-      value: 
-      objectReference: {fileID: 1887715976}
-    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
-        type: 3}
-      propertyPath: PlayOnce
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5162172688346046074, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
       propertyPath: m_RootOrder
@@ -56025,6 +56015,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5162172688346046074, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.8375
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046074, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.95
       objectReference: {fileID: 0}
@@ -64078,7 +64073,7 @@ PrefabInstance:
         type: 3}
       propertyPath: RoomRight
       value: 
-      objectReference: {fileID: 1370354318}
+      objectReference: {fileID: 305205978}
     - target: {fileID: 910216773481203014, guid: 5a13022557472f04fb0c761cf8eac40a,
         type: 3}
       propertyPath: EventActionsOnEnter.Array.size
