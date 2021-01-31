@@ -5102,7 +5102,7 @@ PrefabInstance:
     - target: {fileID: 5162172688346046077, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
       propertyPath: m_Name
-      value: TextTriggerTomb
+      value: TextTriggerMan
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: baafad4748333234f9c9b281de1cb7fa, type: 3}
@@ -5206,7 +5206,7 @@ PrefabInstance:
     - target: {fileID: 5162172688346046077, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
       propertyPath: m_Name
-      value: TextTriggerTomb
+      value: TextTriggerDog
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: baafad4748333234f9c9b281de1cb7fa, type: 3}
@@ -18420,12 +18420,14 @@ PrefabInstance:
     - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
       propertyPath: Text
-      value: 'The purple tree.
+      value: 'First, it''s confusing
 
-        It holds the key to the rocks
+        What''s seen with own eyes
 
-        blocking
-        your path.'
+        doesn''t
+        fit the sense.
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
@@ -18439,13 +18441,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5162172688346046074, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.3279
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046074, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.3279
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046074, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.3279
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046074, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.51
+      value: -2.26
       objectReference: {fileID: 0}
     - target: {fileID: 5162172688346046074, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.62
+      value: -1.73
       objectReference: {fileID: 0}
     - target: {fileID: 5162172688346046074, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
@@ -26573,12 +26590,12 @@ PrefabInstance:
     - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
       propertyPath: Text
-      value: 'The purple tree.
+      value: 'Second you stop,
 
-        It holds the key to the rocks
+        take a deep breath and think,
 
-        blocking
-        your path.'
+        it
+        stands alone'
       objectReference: {fileID: 0}
     - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
@@ -26593,12 +26610,12 @@ PrefabInstance:
     - target: {fileID: 5162172688346046074, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.66
+      value: 0.53
       objectReference: {fileID: 0}
     - target: {fileID: 5162172688346046074, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.68
+      value: -1.92
       objectReference: {fileID: 0}
     - target: {fileID: 5162172688346046074, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
@@ -53723,7 +53740,7 @@ PrefabInstance:
     - target: {fileID: 5162172688346046077, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
       propertyPath: m_Name
-      value: TextTriggerTomb
+      value: TextTriggerSnake
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: baafad4748333234f9c9b281de1cb7fa, type: 3}
@@ -54815,12 +54832,12 @@ PrefabInstance:
     - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
       propertyPath: Text
-      value: 'The purple tree.
+      value: 'Then it''s overcome.
 
-        It holds the key to the rocks
+        Only to be replaced by the next.
 
-        blocking
-        your path.'
+        Such
+        is the wheel of life.'
       objectReference: {fileID: 0}
     - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
