@@ -71,6 +71,7 @@
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\Room.cs" />
      <Compile Include="Assets\Scripts\Sfx.cs" />
+     <Compile Include="Assets\Scripts\Splash\SplashScreen.cs" />
      <Compile Include="Assets\Scripts\TextShowOnCollision.cs" />
      <Compile Include="Assets\Scripts\TraverseTrigger.cs" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
