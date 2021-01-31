@@ -4,20 +4,21 @@ using UnityEngine;
 
 public class ShowTextAction : EventAction
 {
+    [TextArea(15, 20)]
     public string Text;
     public float ShowDuration;
     public bool ShowOnce;
 
-    public GameObject TextParent;
+    private GameObject _textParent;
     private TextMeshProUGUI _textUI;
 
     private bool _hasShown;
     
     void Start()
     {
-        TextParent = FindObjectOfType<Game>().TextParent;
+        _textParent = FindObjectOfType<Game>().TextParent;
 
-        _textUI = TextParent.GetComponentInChildren<TextMeshProUGUI>();
+        _textUI = _textParent.GetComponentInChildren<TextMeshProUGUI>();
         _hasShown = false;
     }
     
@@ -37,11 +38,11 @@ public class ShowTextAction : EventAction
 
     private IEnumerator ShowText()
     {
-        TextParent.gameObject.SetActive(true);
+        _textParent.gameObject.SetActive(true);
         _textUI.SetText(Text);
         _hasShown = true;
         yield return new WaitForSeconds(ShowDuration);
-        TextParent.gameObject.SetActive(false);
+        _textParent.gameObject.SetActive(false);
         _textUI.SetText("");
     }
 }
