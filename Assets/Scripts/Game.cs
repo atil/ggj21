@@ -38,6 +38,14 @@ public class Game : MonoBehaviour
         _isFirstEntry = true;
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+    }
+
     public void Traverse(TraverseDirection direction)
     {
         switch (direction)
