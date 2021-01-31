@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ShowTextAction : EventAction
 {
-    [TextArea(15, 20)]
+    [TextArea(4, 4)]
     public string Text;
     public float ShowDuration;
     public bool ShowOnce;

@@ -17,10 +17,10 @@
   - font
   - bg image
 - sfx: walk
+- build pipeline
 
 +TODO+
-- halkalari parlatma
-- build pipeline
+- test: halkalari parlatma puzzle'i
 - riddle texts
 - rooms
   - connections
@@ -28,6 +28,8 @@
   - sfx triggers (new room etc.)
 - win state
 - splash
+- bug: diagonal movement
+- bug: quick traversal
 
 +POLISH+
 - walk particles
