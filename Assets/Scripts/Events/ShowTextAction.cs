@@ -5,30 +5,19 @@ using UnityEngine;
 public class ShowTextAction : EventAction
 {
     public string Text;
-    public bool ShowOnUp;
     public float ShowDuration;
     public bool ShowOnce;
-    
-    public GameObject TextUpGo;
-    public GameObject TextBottomGo;
 
-    private GameObject _textGo;
+    public GameObject TextParent;
     private TextMeshProUGUI _textUI;
 
     private bool _hasShown;
     
     void Start()
     {
-        if (ShowOnUp)
-        {
-            _textGo = TextUpGo;    
-        }
-        else
-        {
-            _textGo = TextBottomGo;
-        }
+        TextParent = FindObjectOfType<Game>().TextParent;
 
-        _textUI = _textGo.GetComponent<TextMeshProUGUI>();
+        _textUI = TextParent.GetComponentInChildren<TextMeshProUGUI>();
         _hasShown = false;
     }
     
@@ -48,11 +37,11 @@ public class ShowTextAction : EventAction
 
     private IEnumerator ShowText()
     {
-        _textGo.SetActive(true);
+        TextParent.gameObject.SetActive(true);
         _textUI.SetText(Text);
         _hasShown = true;
         yield return new WaitForSeconds(ShowDuration);
-        _textGo.SetActive(false);
+        TextParent.gameObject.SetActive(false);
         _textUI.SetText("");
     }
 }

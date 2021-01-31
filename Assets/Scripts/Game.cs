@@ -15,6 +15,7 @@ public class Game : MonoBehaviour
     public Sfx Sfx;
     public Room CurrentRoom;
     public GridLayout Grid;
+    public GameObject TextParent;
 
     public Transform RoomTargetLeft;
     public Transform RoomTargetRight;
