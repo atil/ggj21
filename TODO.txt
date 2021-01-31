@@ -30,6 +30,7 @@
 - splash
 
 +POLISH+
+- walk particles
 - room props
 - exclamation mark trigger
 - character animations
