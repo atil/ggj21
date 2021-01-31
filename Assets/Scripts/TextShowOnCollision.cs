@@ -3,12 +3,10 @@ using UnityEngine;
 
 public class TextShowOnCollision : MonoBehaviour
 {
+    [TextArea(15, 20)]
     public string Text;
-    public bool ShowOnUp;
-    public GameObject TextUpGo;
-    public GameObject TextBottomGo;
 
-    private GameObject _textGo;
+    private GameObject _textParent;
     private TextMeshProUGUI _textUI;
     private BoxCollider2D _collider;
     
@@ -16,16 +14,9 @@ public class TextShowOnCollision : MonoBehaviour
 
     void Start()
     {
-        if (ShowOnUp)
-        {
-            _textGo = TextUpGo;    
-        }
-        else
-        {
-            _textGo = TextBottomGo;
-        }
 
-        _textUI = _textGo.GetComponent<TextMeshProUGUI>();
+        _textParent = FindObjectOfType<Game>().TextParent;
+        _textUI = _textParent.GetComponentInChildren<TextMeshProUGUI>();
         _collider = GetComponent<BoxCollider2D>();
         _onTrigger = false;
     }
@@ -50,13 +41,13 @@ public class TextShowOnCollision : MonoBehaviour
 
         if (!_onTrigger && _onTriggerCurrentFrame)
         {
-            _textGo.SetActive(true);
+            _textParent.gameObject.SetActive(true);
             _textUI.SetText(Text);
         }
 
         if (_onTrigger && !_onTriggerCurrentFrame)
         {
-            _textGo.SetActive(false);
+            _textParent.gameObject.SetActive(false);
             _textUI.SetText("");
             
         }
