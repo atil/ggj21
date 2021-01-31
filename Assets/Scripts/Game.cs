@@ -25,8 +25,9 @@ public class Game : MonoBehaviour
 
     public AnimationCurve TraverseCurve;
     public float TraverseDuration = 1f;
-    
-    public bool IsTraversing { get; private set; }
+
+    public bool IsTraversing;
+    public bool EndGameTriggered = false;
 
     public List<string> TravelHistory;
     

@@ -18685,6 +18685,8 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   TraverseDuration: 1
+  IsTraversing: 0
+  EndGameTriggered: 0
   TravelHistory: []
 --- !u!4 &501087361
 Transform:
@@ -46130,6 +46132,53 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c880838954a35a4daa88e82aab471bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1707326374 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5162172688346046077, guid: baafad4748333234f9c9b281de1cb7fa,
+    type: 3}
+  m_PrefabInstance: {fileID: 1941003889}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1707326375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1707326374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a61b2a1cd47240f692afb7364c81ebab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CallOnEntranceDirection: 0
+  Game: {fileID: 501087360}
+  Cover: {fileID: 0}
+  MusicSource: {fileID: 519420030}
+  RhythmSource: {fileID: 519420030}
+  FadeOutCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1722734502
 GameObject:
   m_ObjectHideFlags: 0
@@ -55766,6 +55815,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   ParticlePrefab: {fileID: 74748219}
   ParticlesParent: {fileID: 1822238957}
+  CanTraverse: 1
 --- !u!4 &1937524722
 Transform:
   m_ObjectHideFlags: 0
@@ -63977,7 +64027,7 @@ PrefabInstance:
         type: 3}
       propertyPath: RoomRight
       value: 
-      objectReference: {fileID: 1370354318}
+      objectReference: {fileID: 305205978}
     - target: {fileID: 910216773481203014, guid: 5a13022557472f04fb0c761cf8eac40a,
         type: 3}
       propertyPath: EventActionsOnEnter.Array.size

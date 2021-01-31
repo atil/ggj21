@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
     public Transform ParticlesParent;
     
     private BoxCollider2D _collider;
-    private bool _canTraverse = true;
+    public bool CanTraverse = true;
 
     private bool _isMoving;
     private Coroutine _moveCoroutine;
@@ -120,9 +120,9 @@ public class Player : MonoBehaviour
             if (c.TryGetComponent(out TraverseTrigger traverseTrigger))
             {
                 isInTraverseTrigger = true;
-                if (_canTraverse)
+                if (CanTraverse && !Game.EndGameTriggered)
                 {
-                    _canTraverse = false;
+                    CanTraverse = false;
                     if (_moveCoroutine != null)
                     {
                         StopCoroutine(_moveCoroutine);
@@ -133,7 +133,7 @@ public class Player : MonoBehaviour
         }
         if (!isInTraverseTrigger)
         {
-            _canTraverse = true;
+            CanTraverse = true;
         }
     }
 }

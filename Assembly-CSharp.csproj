@@ -60,6 +60,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Events\ChangeTextAction.cs" />
      <Compile Include="Assets\Scripts\Events\DisableObjectAction.cs" />
+     <Compile Include="Assets\Scripts\Events\EndGameTrigger.cs" />
      <Compile Include="Assets\Scripts\Events\EventAction.cs" />
      <Compile Include="Assets\Scripts\Events\IconColorChangeAction.cs" />
      <Compile Include="Assets\Scripts\Events\IconColorsByTravelHistory.cs" />
