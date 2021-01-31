@@ -15,17 +15,9 @@ public class FadeIn : MonoBehaviour
 
     private float _currTime;
 
-    public void OnEnable()
+    void Start()
     {
-        SceneManager.sceneLoaded += OnSceneLoaded;
-    }
-
-    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    {
-        if (scene.name == "SampleScene")
-        {
-            StartCoroutine(FadeInScene());
-        }
+        StartCoroutine(FadeInScene());
     }
     
     IEnumerator FadeInScene()
