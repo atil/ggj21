@@ -18,18 +18,24 @@
   - bg image
 - sfx: walk
 - build pipeline
+- some trigger to destroy text triggers
 
 +TODO+
 - test: halkalari parlatma puzzle'i
-- riddle texts
-- rooms
-  - connections
+- [WIP] riddle texts
   - text triggers
+- [WIP] rooms
+  - connections
+  - smaller traverse triggers
   - sfx triggers (new room etc.)
 - win state
 - splash
+- bug: text show problems
+  - repro: unlock tree. go down from small rocks, without touching the big one
 - bug: diagonal movement
 - bug: quick traversal
+- bug: room D initial text doesn't show
+- sfx: small achievement?
 
 +POLISH+
 - walk particles
