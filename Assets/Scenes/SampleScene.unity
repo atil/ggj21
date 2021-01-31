@@ -7626,18 +7626,48 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &308823327 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2724939704571338147, guid: 741be7846d9b9634f8c8ec7b1a561cb5,
+    type: 3}
+  m_PrefabInstance: {fileID: 1746876557}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &308823328 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2724939704571338145, guid: 741be7846d9b9634f8c8ec7b1a561cb5,
     type: 3}
   m_PrefabInstance: {fileID: 1746876557}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 308823327}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4c880838954a35a4daa88e82aab471bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &308823329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 308823327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26d1a923f55a5414989d3c7f98efd3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CallOnEntranceDirection: 0
+  IconLists:
+  - {fileID: 1118138425}
+  - {fileID: 1908516491}
+  - {fileID: 1824211039}
+  ExpectedTravel:
+  - F
+  - G
+  - H
+  Game: {fileID: 501087360}
+  DefaultIconColor: {r: 0.07450981, g: 0.1254902, b: 0.12941177, a: 1}
+  ActiveIconColor: {r: 0.44705886, g: 0.43529415, b: 0.6313726, a: 1}
 --- !u!1 &324743370
 GameObject:
   m_ObjectHideFlags: 0
@@ -16188,18 +16218,48 @@ MonoBehaviour:
     Such madness.'
   ShowDuration: 4
   ShowOnce: 1
+--- !u!1 &754042295 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2724939704571338147, guid: 741be7846d9b9634f8c8ec7b1a561cb5,
+    type: 3}
+  m_PrefabInstance: {fileID: 1756572486}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &754042296 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2724939704571338145, guid: 741be7846d9b9634f8c8ec7b1a561cb5,
     type: 3}
   m_PrefabInstance: {fileID: 1756572486}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 754042295}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4c880838954a35a4daa88e82aab471bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &754042297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 754042295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26d1a923f55a5414989d3c7f98efd3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CallOnEntranceDirection: 0
+  IconLists:
+  - {fileID: 2092332831}
+  - {fileID: 1210776912}
+  - {fileID: 110138081}
+  ExpectedTravel:
+  - F
+  - G
+  - H
+  Game: {fileID: 501087360}
+  DefaultIconColor: {r: 0.07450981, g: 0.1254902, b: 0.12941177, a: 1}
+  ActiveIconColor: {r: 0.44705886, g: 0.43529415, b: 0.6313726, a: 1}
 --- !u!1001 &865066016
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22833,6 +22893,16 @@ PrefabInstance:
       propertyPath: RoomRight
       value: 
       objectReference: {fileID: 754042296}
+    - target: {fileID: 2724939704571338145, guid: 741be7846d9b9634f8c8ec7b1a561cb5,
+        type: 3}
+      propertyPath: EventActionsOnEnter.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2724939704571338145, guid: 741be7846d9b9634f8c8ec7b1a561cb5,
+        type: 3}
+      propertyPath: EventActionsOnEnter.Array.data[0]
+      value: 
+      objectReference: {fileID: 1634124262}
     - target: {fileID: 2724939704571338146, guid: 741be7846d9b9634f8c8ec7b1a561cb5,
         type: 3}
       propertyPath: m_RootOrder
@@ -23291,19 +23361,17 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TileSpriteArray.Array.data[6].m_Data
       value: 
-      objectReference: {fileID: -240725928754077359, guid: 4d56232dbf1ee8a458e0acf0982d9b0c,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 2724939705131861808, guid: 741be7846d9b9634f8c8ec7b1a561cb5,
         type: 3}
       propertyPath: m_TileSpriteArray.Array.data[9].m_Data
       value: 
-      objectReference: {fileID: 7711770046441580379, guid: 4d56232dbf1ee8a458e0acf0982d9b0c,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 2724939705131861808, guid: 741be7846d9b9634f8c8ec7b1a561cb5,
         type: 3}
       propertyPath: m_TileSpriteArray.Array.data[10].m_Data
       value: 
-      objectReference: {fileID: 533415640152631969, guid: 4d56232dbf1ee8a458e0acf0982d9b0c,
+      objectReference: {fileID: -240725928754077359, guid: 4d56232dbf1ee8a458e0acf0982d9b0c,
         type: 3}
     - target: {fileID: 2724939705131861808, guid: 741be7846d9b9634f8c8ec7b1a561cb5,
         type: 3}
@@ -23327,7 +23395,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TileSpriteArray.Array.data[14].m_Data
       value: 
-      objectReference: {fileID: -7725788577537263282, guid: 4d56232dbf1ee8a458e0acf0982d9b0c,
+      objectReference: {fileID: 7711770046441580379, guid: 4d56232dbf1ee8a458e0acf0982d9b0c,
         type: 3}
     - target: {fileID: 2724939705131861808, guid: 741be7846d9b9634f8c8ec7b1a561cb5,
         type: 3}
@@ -23339,18 +23407,20 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TileSpriteArray.Array.data[16].m_Data
       value: 
-      objectReference: {fileID: -3602880311204382264, guid: 4d56232dbf1ee8a458e0acf0982d9b0c,
+      objectReference: {fileID: -7725788577537263282, guid: 4d56232dbf1ee8a458e0acf0982d9b0c,
         type: 3}
     - target: {fileID: 2724939705131861808, guid: 741be7846d9b9634f8c8ec7b1a561cb5,
         type: 3}
       propertyPath: m_TileSpriteArray.Array.data[17].m_Data
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 533415640152631969, guid: 4d56232dbf1ee8a458e0acf0982d9b0c,
+        type: 3}
     - target: {fileID: 2724939705131861808, guid: 741be7846d9b9634f8c8ec7b1a561cb5,
         type: 3}
       propertyPath: m_TileSpriteArray.Array.data[18].m_Data
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: -3602880311204382264, guid: 4d56232dbf1ee8a458e0acf0982d9b0c,
+        type: 3}
     - target: {fileID: 2724939705131861808, guid: 741be7846d9b9634f8c8ec7b1a561cb5,
         type: 3}
       propertyPath: m_TileAssetArray.Array.data[1].m_RefCount
@@ -23579,12 +23649,12 @@ PrefabInstance:
     - target: {fileID: 2724939705131861808, guid: 741be7846d9b9634f8c8ec7b1a561cb5,
         type: 3}
       propertyPath: m_TileSpriteArray.Array.data[6].m_RefCount
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2724939705131861808, guid: 741be7846d9b9634f8c8ec7b1a561cb5,
         type: 3}
       propertyPath: m_TileSpriteArray.Array.data[9].m_RefCount
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2724939705131861808, guid: 741be7846d9b9634f8c8ec7b1a561cb5,
         type: 3}
@@ -23624,12 +23694,12 @@ PrefabInstance:
     - target: {fileID: 2724939705131861808, guid: 741be7846d9b9634f8c8ec7b1a561cb5,
         type: 3}
       propertyPath: m_TileSpriteArray.Array.data[17].m_RefCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2724939705131861808, guid: 741be7846d9b9634f8c8ec7b1a561cb5,
         type: 3}
       propertyPath: m_TileSpriteArray.Array.data[18].m_RefCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2724939705131861808, guid: 741be7846d9b9634f8c8ec7b1a561cb5,
         type: 3}
@@ -23739,7 +23809,7 @@ PrefabInstance:
     - target: {fileID: 2724939705131861808, guid: 741be7846d9b9634f8c8ec7b1a561cb5,
         type: 3}
       propertyPath: m_Tiles.Array.data[10].second.m_TileSpriteIndex
-      value: 16
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 2724939705131861808, guid: 741be7846d9b9634f8c8ec7b1a561cb5,
         type: 3}
@@ -23764,12 +23834,12 @@ PrefabInstance:
     - target: {fileID: 2724939705131861808, guid: 741be7846d9b9634f8c8ec7b1a561cb5,
         type: 3}
       propertyPath: m_Tiles.Array.data[15].second.m_TileSpriteIndex
-      value: 10
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 2724939705131861808, guid: 741be7846d9b9634f8c8ec7b1a561cb5,
         type: 3}
       propertyPath: m_Tiles.Array.data[16].second.m_TileSpriteIndex
-      value: 14
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 2724939705131861808, guid: 741be7846d9b9634f8c8ec7b1a561cb5,
         type: 3}
@@ -23794,7 +23864,7 @@ PrefabInstance:
     - target: {fileID: 2724939705131861808, guid: 741be7846d9b9634f8c8ec7b1a561cb5,
         type: 3}
       propertyPath: m_Tiles.Array.data[21].second.m_TileSpriteIndex
-      value: 9
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 2724939705131861808, guid: 741be7846d9b9634f8c8ec7b1a561cb5,
         type: 3}
@@ -23824,7 +23894,7 @@ PrefabInstance:
     - target: {fileID: 2724939705131861808, guid: 741be7846d9b9634f8c8ec7b1a561cb5,
         type: 3}
       propertyPath: m_Tiles.Array.data[27].second.m_TileSpriteIndex
-      value: 6
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2724939705131861808, guid: 741be7846d9b9634f8c8ec7b1a561cb5,
         type: 3}
@@ -24525,18 +24595,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d8b113dc000f9745850b8f15a412471, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1634124260 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2724939704571338147, guid: 741be7846d9b9634f8c8ec7b1a561cb5,
+    type: 3}
+  m_PrefabInstance: {fileID: 1613717607}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1634124261 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2724939704571338145, guid: 741be7846d9b9634f8c8ec7b1a561cb5,
     type: 3}
   m_PrefabInstance: {fileID: 1613717607}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1634124260}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4c880838954a35a4daa88e82aab471bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1634124262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1634124260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26d1a923f55a5414989d3c7f98efd3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CallOnEntranceDirection: 0
+  IconLists:
+  - {fileID: 513753380}
+  - {fileID: 1420620334}
+  - {fileID: 1654344477}
+  ExpectedTravel:
+  - F
+  - G
+  - H
+  Game: {fileID: 501087360}
+  DefaultIconColor: {r: 0.07450981, g: 0.1254902, b: 0.12941177, a: 1}
+  ActiveIconColor: {r: 0.44705886, g: 0.43529415, b: 0.6313726, a: 1}
 --- !u!1001 &1641875818
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35149,6 +35249,16 @@ PrefabInstance:
       propertyPath: RoomRight
       value: 
       objectReference: {fileID: 1634124261}
+    - target: {fileID: 2724939704571338145, guid: 741be7846d9b9634f8c8ec7b1a561cb5,
+        type: 3}
+      propertyPath: EventActionsOnEnter.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2724939704571338145, guid: 741be7846d9b9634f8c8ec7b1a561cb5,
+        type: 3}
+      propertyPath: EventActionsOnEnter.Array.data[0]
+      value: 
+      objectReference: {fileID: 308823329}
     - target: {fileID: 2724939704571338146, guid: 741be7846d9b9634f8c8ec7b1a561cb5,
         type: 3}
       propertyPath: m_RootOrder
@@ -39250,6 +39360,16 @@ PrefabInstance:
       propertyPath: RoomRight
       value: 
       objectReference: {fileID: 1370354318}
+    - target: {fileID: 2724939704571338145, guid: 741be7846d9b9634f8c8ec7b1a561cb5,
+        type: 3}
+      propertyPath: EventActionsOnEnter.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2724939704571338145, guid: 741be7846d9b9634f8c8ec7b1a561cb5,
+        type: 3}
+      propertyPath: EventActionsOnEnter.Array.data[0]
+      value: 
+      objectReference: {fileID: 754042297}
     - target: {fileID: 2724939704571338146, guid: 741be7846d9b9634f8c8ec7b1a561cb5,
         type: 3}
       propertyPath: m_RootOrder
