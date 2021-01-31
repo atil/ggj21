@@ -13,6 +13,7 @@ public class ShowTextAction : EventAction
     private TextMeshProUGUI _textUI;
 
     private bool _hasShown;
+    private Coroutine _showTextCoroutine;
     
     void Start()
     {
@@ -33,7 +34,7 @@ public class ShowTextAction : EventAction
         {
             return;
         }
-        StartCoroutine(ShowText());
+        _showTextCoroutine = StartCoroutine(ShowText());
     }
 
     private IEnumerator ShowText()
@@ -44,5 +45,16 @@ public class ShowTextAction : EventAction
         yield return new WaitForSeconds(ShowDuration);
         _textParent.gameObject.SetActive(false);
         _textUI.SetText("");
+    }
+
+    public void CancelShow()
+    {
+        if (_showTextCoroutine != null)
+        {
+            StopCoroutine(_showTextCoroutine);
+        }
+        _textParent.gameObject.SetActive(false);
+        _textUI.SetText("");
+        
     }
 }
