@@ -6,11 +6,15 @@ public class TextShowOnCollision : MonoBehaviour
     [TextArea(4, 4)]
     public string Text;
 
+    public AudioSource Sound;
+    public bool PlayOnce;
+
     private GameObject _textParent;
     private TextMeshProUGUI _textUI;
     private BoxCollider2D _collider;
     
     private bool _onTrigger;
+    private bool _isPlayed;
 
     void Start()
     {
@@ -19,6 +23,7 @@ public class TextShowOnCollision : MonoBehaviour
         _textUI = _textParent.GetComponentInChildren<TextMeshProUGUI>();
         _collider = GetComponent<BoxCollider2D>();
         _onTrigger = false;
+        _isPlayed = false;
     }
 
     private void Update()
@@ -43,6 +48,12 @@ public class TextShowOnCollision : MonoBehaviour
         {
             _textParent.gameObject.SetActive(true);
             _textUI.SetText(Text);
+
+            if (!PlayOnce || !_isPlayed)
+            {
+                Sound.Play();
+                _isPlayed = true;
+            }
         }
 
         if (_onTrigger && !_onTriggerCurrentFrame)
