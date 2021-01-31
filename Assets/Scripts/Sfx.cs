@@ -1,4 +1,5 @@
     using System.Collections;
+    using System.Collections.Generic;
     using UnityEngine;
 
     public class Sfx : MonoBehaviour
@@ -8,6 +9,19 @@
         public AudioClip MusicClip;
         public AudioClip RhythmClip;
         public AnimationCurve RhythmCurve;
+
+        [Space]
+        public AudioSource WalkAudioSource;
+        public AudioClip Walk1Clip;
+        public AudioClip Walk2Clip;
+
+        private readonly List<AudioClip> _walkClips = new List<AudioClip>();
+
+        void Start()
+        {
+            _walkClips.Add(Walk1Clip);
+            _walkClips.Add(Walk2Clip);
+        }
 
         public void TraverseEffect(float duration)
         {
@@ -26,5 +40,11 @@
             }
 
             RhythmAudioSource.volume = highVolume;
+        }
+
+        public void PlayFootstep()
+        {
+            int r = Random.Range(0, _walkClips.Count);
+            WalkAudioSource.PlayOneShot(_walkClips[r]);
         }
     }

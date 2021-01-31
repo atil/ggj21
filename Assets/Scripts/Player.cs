@@ -70,6 +70,8 @@ public class Player : MonoBehaviour
             _isMoving = false; // Can't move into the collider
             yield break;
         }
+        
+        Game.Sfx.PlayFootstep();
 
         const float duration = 0.15f;
         for (float f = 0; f < duration; f += Time.deltaTime)
