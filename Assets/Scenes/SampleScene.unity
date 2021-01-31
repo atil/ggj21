@@ -14524,8 +14524,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CallOnEntranceDirection: 0
-  Text: Ayni oda amk
-  ShowDuration: 1
+  Text: 'Impossible!
+
+    Why is this the same place?
+
+    Such madness.'
+  ShowDuration: 4
   ShowOnce: 1
 --- !u!1001 &1000090249
 PrefabInstance:
@@ -18008,8 +18012,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CallOnEntranceDirection: 0
-  Text: UNLOCK MU LA O?
-  ShowDuration: 1
+  Text: 'You found it!
+
+    The tree greets you
+
+    with a purple "Hello"'
+  ShowDuration: 5
   ShowOnce: 1
 --- !u!114 &1505562151
 MonoBehaviour:

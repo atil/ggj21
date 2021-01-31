@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class TextShowOnCollision : MonoBehaviour
 {
-    [TextArea(15, 20)]
+    [TextArea(4, 4)]
     public string Text;
 
     private GameObject _textParent;
