@@ -43040,13 +43040,13 @@ PrefabInstance:
     - target: {fileID: 910216773481203014, guid: 5a13022557472f04fb0c761cf8eac40a,
         type: 3}
       propertyPath: EventActionsOnEnter.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 910216773481203014, guid: 5a13022557472f04fb0c761cf8eac40a,
         type: 3}
       propertyPath: EventActionsOnEnter.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1532866875}
     - target: {fileID: 910216773481203014, guid: 5a13022557472f04fb0c761cf8eac40a,
         type: 3}
       propertyPath: EventActionsOnEnter.Array.data[1]

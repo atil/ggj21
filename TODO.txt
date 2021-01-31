@@ -19,6 +19,9 @@
 - sfx: walk
 - build pipeline
 - some trigger to destroy text triggers
+- bug: quick traversal
+- walk particles
+- bug: room D initial text doesn't show
 
 +TODO+
 - test: halkalari parlatma puzzle'i
@@ -33,12 +36,9 @@
 - bug: text show problems
   - repro: unlock tree. go down from small rocks, without touching the big one
 - bug: diagonal movement
-- bug: quick traversal
-- bug: room D initial text doesn't show
 - sfx: small achievement?
 
 +POLISH+
-- walk particles
 - room props
 - exclamation mark trigger
 - character animations
