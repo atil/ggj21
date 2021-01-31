@@ -64073,7 +64073,7 @@ PrefabInstance:
         type: 3}
       propertyPath: RoomRight
       value: 
-      objectReference: {fileID: 305205978}
+      objectReference: {fileID: 1370354318}
     - target: {fileID: 910216773481203014, guid: 5a13022557472f04fb0c761cf8eac40a,
         type: 3}
       propertyPath: EventActionsOnEnter.Array.size
