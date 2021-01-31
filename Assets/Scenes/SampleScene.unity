@@ -7239,12 +7239,12 @@ PrefabInstance:
     - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
       propertyPath: Text
-      value: 'If you''re lost,
+      value: 'The purple tree.
 
-        remember to look back.
+        It holds the key to the rocks
 
-        You''ll find
-        the tree'
+        blocking
+        your path.'
       objectReference: {fileID: 0}
     - target: {fileID: 5162172688346046074, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
@@ -15028,6 +15028,95 @@ MonoBehaviour:
     Such madness.'
   ShowDuration: 4
   ShowOnce: 1
+--- !u!1001 &865066016
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 207369432}
+    m_Modifications:
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: Text
+      value: 'If you''re lost,
+
+        remember to look back.
+
+        You''ll find
+        the tree'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046074, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046074, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.7375
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046074, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.0600004
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046074, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.059999466
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046074, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046074, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046074, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046074, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046074, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046074, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046074, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046074, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046075, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 2.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046077, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: m_Name
+      value: TextTrigger (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: baafad4748333234f9c9b281de1cb7fa, type: 3}
 --- !u!1001 &1000090249
 PrefabInstance:
   m_ObjectHideFlags: 0

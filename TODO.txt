@@ -22,12 +22,14 @@
 +TODO+
 - test: halkalari parlatma puzzle'i
 - riddle texts
+- some trigger to destroy text triggers
 - rooms
   - connections
   - text triggers
   - sfx triggers (new room etc.)
 - win state
 - splash
+- bug: text show problems
 - bug: diagonal movement
 - bug: quick traversal
 
