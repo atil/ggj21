@@ -8,6 +8,8 @@ public class Player : MonoBehaviour
 {
     public Game Game;
     public AnimationCurve MovementCurve;
+    public GameObject ParticlePrefab;
+    public Transform ParticlesParent;
     
     private BoxCollider2D _collider;
     private bool _canTraverse = true;
@@ -76,7 +78,8 @@ public class Player : MonoBehaviour
             _isMoving = false; // Can't move into the collider
             yield break;
         }
-        
+
+        StartCoroutine(PlayFootstepParticleCoroutine());
         Game.Sfx.PlayFootstep();
 
         const float duration = 0.15f;
@@ -90,6 +93,15 @@ public class Player : MonoBehaviour
         transform.position = target;
         _isMoving = false;
         ClampIntoBounds();
+    }
+
+    private IEnumerator PlayFootstepParticleCoroutine()
+    {
+        GameObject particleGo = Instantiate(ParticlePrefab, transform.position, Quaternion.identity);
+        particleGo.SetActive(true);
+        particleGo.transform.SetParent(ParticlesParent);
+        yield return new WaitForSeconds(1f);
+        Destroy(particleGo);
     }
 
     private void ClampIntoBounds()
