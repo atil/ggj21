@@ -27,19 +27,19 @@ public class Player : MonoBehaviour
             return;
         }
 
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
         {
             _moveCoroutine = StartCoroutine(MoveCoroutine(Vector2Int.up));
         }
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
             _moveCoroutine = StartCoroutine(MoveCoroutine(Vector2Int.left));
         }
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
         {
             _moveCoroutine = StartCoroutine(MoveCoroutine(Vector2Int.down));
         }
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
             _moveCoroutine = StartCoroutine(MoveCoroutine(Vector2Int.right));
         }
@@ -65,6 +65,13 @@ public class Player : MonoBehaviour
         Vector2 target = Game.Grid.CellToWorld(cellPos) - offset;
         TilemapCollider2D currentCollider = Game.CurrentRoom.transform.Find("Collision").GetComponent<TilemapCollider2D>();
         if (currentCollider.OverlapPoint(target))
+        {
+            _isMoving = false; // Can't move into the collider
+            yield break;
+        }
+        
+        TilemapCollider2D currentCollider2 = Game.CurrentRoom.transform.Find("Doors").GetComponent<TilemapCollider2D>();
+        if (currentCollider2.OverlapPoint(target))
         {
             _isMoving = false; // Can't move into the collider
             yield break;
