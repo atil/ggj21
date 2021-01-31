@@ -22,9 +22,12 @@
 - bug: quick traversal
 - walk particles
 - bug: room D initial text doesn't show
+- bug: text show problems
+  - repro: unlock tree. go down from small rocks, without touching the big one
+- sfx: small achievement?
+- test: halkalari parlatma puzzle'i
 
 +TODO+
-- test: halkalari parlatma puzzle'i
 - [WIP] riddle texts
   - text triggers
 - [WIP] rooms
@@ -33,10 +36,7 @@
   - sfx triggers (new room etc.)
 - win state
 - splash
-- bug: text show problems
-  - repro: unlock tree. go down from small rocks, without touching the big one
 - bug: diagonal movement
-- sfx: small achievement?
 
 +POLISH+
 - room props

@@ -73,7 +73,11 @@ public class Game : MonoBehaviour
         float traverseDuration = targetRoom == CurrentRoom ? TraverseDuration * 2f : TraverseDuration;
         StartCoroutine(TeleportPlayer(direction, targetRoom, traverseDuration));
 
-        Debug.Log("Traversing");
+        foreach (var textShow in FindObjectsOfType<ShowTextAction>())
+        {
+            textShow.CancelShow();
+        }
+        
         Sfx.TraverseEffect(traverseDuration);
         
         if (targetRoom != null)
