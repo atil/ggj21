@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Events\EventAction.cs" />
+     <Compile Include="Assets\Scripts\Events\IconColorChangeAction.cs" />
      <Compile Include="Assets\Scripts\Events\OpenDoorAction.cs" />
      <Compile Include="Assets\Scripts\Events\ShowTextAction.cs" />
      <Compile Include="Assets\Scripts\Game.cs" />
