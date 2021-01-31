@@ -12654,6 +12654,16 @@ PrefabInstance:
       propertyPath: Text
       value: Hello
       objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: Sound
+      value: 
+      objectReference: {fileID: 1887715976}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: PlayOnce
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5162172688346046074, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
       propertyPath: m_RootOrder
