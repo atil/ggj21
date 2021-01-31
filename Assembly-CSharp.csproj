@@ -67,6 +67,7 @@
      <Compile Include="Assets\Scripts\Events\OpenDoorByTravelHistory.cs" />
      <Compile Include="Assets\Scripts\Events\PlaySoundAction.cs" />
      <Compile Include="Assets\Scripts\Events\ShowTextAction.cs" />
+     <Compile Include="Assets\Scripts\FadeIn.cs" />
      <Compile Include="Assets\Scripts\Game.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\Room.cs" />
