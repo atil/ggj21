@@ -31,15 +31,15 @@ public class Player : MonoBehaviour
         {
             _moveCoroutine = StartCoroutine(MoveCoroutine(Vector2Int.up));
         }
-        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+        else if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
             _moveCoroutine = StartCoroutine(MoveCoroutine(Vector2Int.left));
         }
-        if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
+        else if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
         {
             _moveCoroutine = StartCoroutine(MoveCoroutine(Vector2Int.down));
         }
-        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+        else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
             _moveCoroutine = StartCoroutine(MoveCoroutine(Vector2Int.right));
         }
