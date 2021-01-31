@@ -123,54 +123,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Direction: 1
---- !u!114 &1704331010
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2724939704571338147}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 832ff94b3c927cd4b9feaabcfe762fe3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CallOnEntranceDirection: 0
-  Text: UNLOCK MU LA O?
-  ShowDuration: 1
-  ShowOnce: 1
-  TextParent: {fileID: 0}
---- !u!114 &1704331009
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2724939704571338147}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f35958daa18d8a442bc744af6e9fad64, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CallOnEntranceDirection: 0
-  DoorTilemap: {fileID: 0}
-  DoorStart: {x: -2, y: -5}
-  DoorEnd: {x: -1, y: -5}
---- !u!114 &1704331008
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2724939704571338147}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 842fbfde9af1fb9488a20d6688e2df4a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CallOnEntranceDirection: 0
-  Icon: {fileID: 0}
-  NewIconColor: {r: 0.95686275, g: 0.7058824, b: 0.105882354, a: 1}
 --- !u!1001 &2986259753101301991
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7962,7 +7914,7 @@ PrefabInstance:
     - target: {fileID: 910216773481203012, guid: 5a13022557472f04fb0c761cf8eac40a,
         type: 3}
       propertyPath: m_Name
-      value: RoomD
+      value: RoomD Variant
       objectReference: {fileID: 0}
     - target: {fileID: 910216773481203012, guid: 5a13022557472f04fb0c761cf8eac40a,
         type: 3}
@@ -8058,17 +8010,17 @@ PrefabInstance:
         type: 3}
       propertyPath: EventActionsOnEnter.Array.data[0]
       value: 
-      objectReference: {fileID: 1704331010}
+      objectReference: {fileID: 0}
     - target: {fileID: 910216773481203014, guid: 5a13022557472f04fb0c761cf8eac40a,
         type: 3}
       propertyPath: EventActionsOnEnter.Array.data[1]
       value: 
-      objectReference: {fileID: 1704331009}
+      objectReference: {fileID: 0}
     - target: {fileID: 910216773481203014, guid: 5a13022557472f04fb0c761cf8eac40a,
         type: 3}
       propertyPath: EventActionsOnEnter.Array.data[2]
       value: 
-      objectReference: {fileID: 1704331008}
+      objectReference: {fileID: 0}
     - target: {fileID: 910216774145034950, guid: 5a13022557472f04fb0c761cf8eac40a,
         type: 3}
       propertyPath: TextUpGo
@@ -9106,12 +9058,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a13022557472f04fb0c761cf8eac40a, type: 3}
---- !u!1 &2724939704571338147 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 910216773481203012, guid: 5a13022557472f04fb0c761cf8eac40a,
-    type: 3}
-  m_PrefabInstance: {fileID: 2986259753101301991}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2724939704571338146 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 910216773481203013, guid: 5a13022557472f04fb0c761cf8eac40a,
