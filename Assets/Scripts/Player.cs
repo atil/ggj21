@@ -47,7 +47,6 @@ public class Player : MonoBehaviour
         Collider2D[] colliders = Physics2D.OverlapBoxAll(transform.position, _collider.size, 0);
         HandleTriggers(colliders);
 
-        ClampIntoBounds();
     }
 
     private IEnumerator MoveCoroutine(Vector2Int dir)
@@ -83,6 +82,7 @@ public class Player : MonoBehaviour
 
         transform.position = target;
         _isMoving = false;
+        ClampIntoBounds();
     }
 
     private void ClampIntoBounds()

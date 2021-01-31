@@ -35,7 +35,6 @@
             for (float f = 0f; f < duration; f += Time.deltaTime)
             {
                 RhythmAudioSource.volume = RhythmCurve.Evaluate(f / duration);
-                Debug.Log($"Volume {RhythmAudioSource.volume}");
                 yield return null;
             }
 

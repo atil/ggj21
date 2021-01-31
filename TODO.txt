@@ -12,16 +12,15 @@
 - doors
   - open doors
   - polish 
-
-+TODO+
-- halkalari parlatma
+- sfx: music/traverse
 - text UI
   - font
   - bg image
+- sfx: walk
+
++TODO+
+- halkalari parlatma
 - build pipeline
-- sfx
-  - walk
-  - traverse
 - riddle texts
 - rooms
   - connections
