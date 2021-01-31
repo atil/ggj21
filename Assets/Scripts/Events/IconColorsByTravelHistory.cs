@@ -15,23 +15,22 @@ public class IconColorsByTravelHistory : EventAction
     
     public override void Call(RoomEnteranceDirection direction = RoomEnteranceDirection.Any, bool isFirstEntry = false)
     {
-        var travelHistory = Game.TravelHistory;
-        var len = travelHistory.Count;
+        var len = Game.TravelHistory.Count;
         
                 
-        if (Equals(travelHistory[len - 3], ExpectedTravel[0]) && Equals(travelHistory[len - 2], ExpectedTravel[1]) && Equals(travelHistory[len - 1], ExpectedTravel[2]))
+        if (Equals(Game.TravelHistory[len - 3], ExpectedTravel[0]) && Equals(Game.TravelHistory[len - 2], ExpectedTravel[1]) && Equals(Game.TravelHistory[len - 1], ExpectedTravel[2]))
         {
             IconLists[0].color = ActiveIconColor;
             IconLists[1].color = ActiveIconColor;
             IconLists[2].color = ActiveIconColor;
         }
-        else if (Equals(travelHistory[len - 2], ExpectedTravel[0]) && Equals(travelHistory[len - 1], ExpectedTravel[1]))
+        else if (Equals(Game.TravelHistory[len - 2], ExpectedTravel[0]) && Equals(Game.TravelHistory[len - 1], ExpectedTravel[1]))
         {
             IconLists[0].color = ActiveIconColor;
             IconLists[1].color = ActiveIconColor;
             IconLists[2].color = DefaultIconColor;
         }
-        else if (Equals(travelHistory[len - 1], ExpectedTravel[0]))
+        else if (Equals(Game.TravelHistory[len - 1], ExpectedTravel[0]))
         {
             IconLists[0].color = ActiveIconColor;
             IconLists[1].color = DefaultIconColor;
