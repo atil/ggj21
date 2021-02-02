@@ -1,7 +1,10 @@
++DONE+
+- bug: diagonal movement
+  - it was a floating point precision error. poked the player start position by 0.01
+
 +TODO+
 - bug: character being stuck
 - bug: the last message not seen in some cases
-- bug: diagonal movement
 - win state (an actual one -- could think of something better)
 - splash polish
 - additional room props
