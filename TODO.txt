@@ -1,45 +1,11 @@
-+DONE+
-- transition
-  - self room transition
-  - transition polish
--text
- - show text UI
-  - triggerable text
-  - one time only text
- - interaction to show text
-- OnRoomEntered trigger
-- OnNewRoomEntered trigger
-- doors
-  - open doors
-  - polish 
-- sfx: music/traverse
-- text UI
-  - font
-  - bg image
-- sfx: walk
-- build pipeline
-- some trigger to destroy text triggers
-- bug: quick traversal
-- walk particles
-- bug: room D initial text doesn't show
-- bug: text show problems
-  - repro: unlock tree. go down from small rocks, without touching the big one
-- sfx: small achievement?
-- test: halkalari parlatma puzzle'i
-
 +TODO+
-- [WIP] riddle texts
-  - text triggers
-- [WIP] rooms
-  - connections
-  - smaller traverse triggers
-  - sfx triggers (new room etc.)
-- win state
-- splash
+- bug: character being stuck
+- bug: the last message not seen in some cases
 - bug: diagonal movement
-
-+POLISH+
-- room props
-- exclamation mark trigger
+- win state (an actual one -- could think of something better)
+- splash polish
+- additional room props
+- text being written animation
+- exclamation mark on text trigger
 - character animations
 
