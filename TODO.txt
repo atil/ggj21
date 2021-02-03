@@ -5,7 +5,7 @@
   - it was _isMoving never being cleared in some cases where we stop the coroutine on the moment of traversal (not 100% sure though, hard to repro)
 
 +TODO+
-- bug: diagonal movement is still there
+- [WIP] bug: diagonal movement is still there
 - bug: sometimes after down transition, the first movement moves two squares
 - bug: silly wonky-wonky movement when the player tries to leave the room right after entering it
 - bug: the last message not seen in some cases
