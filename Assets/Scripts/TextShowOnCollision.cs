@@ -32,7 +32,7 @@ public class TextShowOnCollision : MonoBehaviour
     {
         Collider2D[] colliders = Physics2D.OverlapBoxAll(transform.position, _collider.size , 0);
 
-        var _onTriggerCurrentFrame = false;
+        var onTriggerCurrentFrame = false;
         foreach (Collider2D c in colliders)
         {
             if (c == _collider)
@@ -42,11 +42,11 @@ public class TextShowOnCollision : MonoBehaviour
 
             if (c.name == "Player")
             {
-                _onTriggerCurrentFrame = true;
+                onTriggerCurrentFrame = true;
             }
         }
 
-        if (!_onTrigger && _onTriggerCurrentFrame)
+        if (!_onTrigger && onTriggerCurrentFrame)
         {
             _textParent.gameObject.SetActive(true);
             _textUI.SetText(Text);
@@ -62,13 +62,13 @@ public class TextShowOnCollision : MonoBehaviour
             }
         }
 
-        if (_onTrigger && !_onTriggerCurrentFrame)
+        if (_onTrigger && !onTriggerCurrentFrame)
         {
             _textParent.gameObject.SetActive(false);
             _textUI.SetText("");
             
         }
 
-        _onTrigger = _onTriggerCurrentFrame;
+        _onTrigger = onTriggerCurrentFrame;
     }
 }
