@@ -125,6 +125,7 @@ public class Player : MonoBehaviour
                     CanTraverse = false;
                     if (_moveCoroutine != null)
                     {
+                        _isMoving = false;
                         StopCoroutine(_moveCoroutine);
                     }
                     Game.Traverse(traverseTrigger.Direction);
