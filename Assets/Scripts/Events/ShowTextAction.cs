@@ -9,6 +9,8 @@ public class ShowTextAction : EventAction
     public float ShowDuration;
     public bool ShowOnce;
 
+    private const float kTextShownInterval = 0.05f;
+
     private GameObject _textParent;
     private TextMeshProUGUI _textUI;
 
@@ -37,16 +39,6 @@ public class ShowTextAction : EventAction
         _showTextCoroutine = StartCoroutine(ShowText());
     }
 
-    private IEnumerator ShowText()
-    {
-        _textParent.gameObject.SetActive(true);
-        _textUI.SetText(Text);
-        _hasShown = true;
-        yield return new WaitForSeconds(ShowDuration);
-        _textParent.gameObject.SetActive(false);
-        _textUI.SetText("");
-    }
-
     public void CancelShow()
     {
         if (_showTextCoroutine != null)
@@ -56,5 +48,31 @@ public class ShowTextAction : EventAction
         _textParent.gameObject.SetActive(false);
         _textUI.SetText("");
         
+    }
+    
+    private IEnumerator ShowText()
+    {
+        var currLength = 1;
+        var currText = "";
+        var lastPart = "";
+
+        _hasShown = true;
+        _textUI.SetText("");
+        _textParent.gameObject.SetActive(true);
+        
+        while (currLength <= Text.Length)
+        {
+            yield return new WaitForSeconds(kTextShownInterval);
+            
+            currText = Text.Substring(0, currLength);
+            lastPart = "<color=#FFFFFF00>" + Text.Substring(currLength, Text.Length - currLength) + "</color>";
+            _textUI.SetText(currText + lastPart);
+            
+            currLength += 1;
+        }
+        
+        yield return new WaitForSeconds(ShowDuration);
+        _textParent.gameObject.SetActive(false);
+        _textUI.SetText("");
     }
 }

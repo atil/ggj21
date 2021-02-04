@@ -5029,6 +5029,11 @@ PrefabInstance:
       propertyPath: PlayOnce
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: TextShownInterval
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 5162172688346046074, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
       propertyPath: m_RootOrder
@@ -5132,6 +5137,11 @@ PrefabInstance:
         type: 3}
       propertyPath: PlayOnce
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: TextShownInterval
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 5162172688346046074, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
@@ -12654,6 +12664,16 @@ PrefabInstance:
       propertyPath: Text
       value: Hello
       objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: Sound
+      value: 
+      objectReference: {fileID: 1887715976}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: TextShownInterval
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 5162172688346046074, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
       propertyPath: m_RootOrder
@@ -18383,7 +18403,7 @@ MonoBehaviour:
     Final destination for all men.
 
     It beckons.'
-  ShowDuration: 4
+  ShowDuration: 2
   ShowOnce: 1
 --- !u!114 &422530671
 MonoBehaviour:
@@ -18445,6 +18465,11 @@ PrefabInstance:
       propertyPath: TriggerToEnable
       value: 
       objectReference: {fileID: 146453582}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: TextShownInterval
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 5162172688346046074, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
       propertyPath: m_RootOrder
@@ -18558,6 +18583,16 @@ PrefabInstance:
         type: 3}
       propertyPath: PlayOnce
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: TriggerToEnable
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: TextShownInterval
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 5162172688346046074, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
@@ -27069,7 +27104,7 @@ MonoBehaviour:
     How is this the same place?
 
     Such madness.'
-  ShowDuration: 4
+  ShowDuration: 2
   ShowOnce: 1
 --- !u!1 &754042295 stripped
 GameObject:
@@ -27117,6 +27152,79 @@ MonoBehaviour:
   LightSound02: {fileID: 208863390}
   LightSound03: {fileID: 1903647537}
   LightSoundReset: {fileID: 2442990}
+--- !u!1 &775413116
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 775413117}
+  - component: {fileID: 775413119}
+  - component: {fileID: 775413118}
+  m_Layer: 5
+  m_Name: TMP SubMeshUI [Kenney Pixel SDF Material + LiberationSans SDF Atlas]
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &775413117
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 775413116}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1346030429}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &775413118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 775413116}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 058cba836c1846c3aa1c5fd2e28aea77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_spriteAsset: {fileID: 0}
+  m_material: {fileID: 0}
+  m_sharedMaterial: {fileID: 0}
+  m_isDefaultMaterial: 0
+  m_padding: 1.25
+  m_canvasRenderer: {fileID: 775413119}
+  m_TextComponent: {fileID: 1346030430}
+  m_materialReferenceIndex: 1
+--- !u!222 &775413119
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 775413116}
+  m_CullTransparentMesh: 0
 --- !u!1001 &865066016
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27143,6 +27251,11 @@ PrefabInstance:
         type: 3}
       propertyPath: PlayOnce
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: TextShownInterval
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 5162172688346046074, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
@@ -27248,6 +27361,11 @@ PrefabInstance:
       propertyPath: TriggerToEnable
       value: 
       objectReference: {fileID: 1707326378}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: TextShownInterval
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 5162172688346046074, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
       propertyPath: m_RootOrder
@@ -32011,7 +32129,8 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 775413117}
   m_Father: {fileID: 1722734503}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -32041,7 +32160,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'TEST
 
-    asdf
+    <color=#FF000000>asdf</color>
 
     asdf'
   m_isRightToLeft: 0
@@ -32127,7 +32246,7 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_subTextObjects:
   - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 775413118}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -32514,7 +32633,7 @@ MonoBehaviour:
     The tree greets you
 
     with a purple "Hello"'
-  ShowDuration: 5
+  ShowDuration: 2
   ShowOnce: 1
 --- !u!114 &1505562151
 MonoBehaviour:
@@ -32606,7 +32725,7 @@ MonoBehaviour:
     Slow down and remember
 
     what goes where.'
-  ShowDuration: 4
+  ShowDuration: 2
   ShowOnce: 1
 --- !u!1 &1533445655
 GameObject:
@@ -36523,6 +36642,11 @@ PrefabInstance:
         type: 3}
       propertyPath: PlayOnce
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: TextShownInterval
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 5162172688346046074, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
@@ -54830,6 +54954,11 @@ PrefabInstance:
       propertyPath: PlayOnce
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: TextShownInterval
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 5162172688346046074, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
       propertyPath: m_RootOrder
@@ -56008,6 +56137,11 @@ PrefabInstance:
       propertyPath: Sound
       value: 
       objectReference: {fileID: 1887715976}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: TextShownInterval
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 5162172688346046074, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
       propertyPath: m_RootOrder

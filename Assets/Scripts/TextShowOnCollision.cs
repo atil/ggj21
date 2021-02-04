@@ -1,4 +1,5 @@
-﻿using TMPro;
+﻿using System.Collections;
+using TMPro;
 using UnityEngine;
 
 public class TextShowOnCollision : MonoBehaviour
@@ -10,6 +11,8 @@ public class TextShowOnCollision : MonoBehaviour
     public bool PlayOnce;
 
     public BoxCollider2D TriggerToEnable = null;
+
+    private const float kTextShownInterval = 0.05f;
 
     private GameObject _textParent;
     private TextMeshProUGUI _textUI;
@@ -48,9 +51,9 @@ public class TextShowOnCollision : MonoBehaviour
 
         if (!_onTrigger && onTriggerCurrentFrame)
         {
-            _textParent.gameObject.SetActive(true);
-            _textUI.SetText(Text);
-
+            _onTrigger = true;
+            StartCoroutine(ShowText());
+            
             if (!PlayOnce || !_isPlayed)
             {
                 Sound.Play();
@@ -66,9 +69,29 @@ public class TextShowOnCollision : MonoBehaviour
         {
             _textParent.gameObject.SetActive(false);
             _textUI.SetText("");
-            
         }
 
         _onTrigger = onTriggerCurrentFrame;
+    }
+
+    private IEnumerator ShowText()
+    {
+        var currLength = 1;
+        var currText = "";
+        var lastPart = "";
+        
+        _textUI.SetText("");
+        _textParent.gameObject.SetActive(true);
+        
+        while (currLength <= Text.Length && _onTrigger)
+        {
+            yield return new WaitForSeconds(kTextShownInterval);
+            
+            currText = Text.Substring(0, currLength);
+            lastPart = "<color=#FFFFFF00>" + Text.Substring(currLength, Text.Length - currLength) + "</color>";
+            _textUI.SetText(currText + lastPart);
+            
+            currLength += 1;
+        }
     }
 }

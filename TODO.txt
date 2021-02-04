@@ -3,6 +3,7 @@
   - it was a floating point precision error. poked the player start position by 0.01
 - bug: character being stuck
   - it was _isMoving never being cleared in some cases where we stop the coroutine on the moment of traversal (not 100% sure though, hard to repro)
+- text being written animation
 
 +TODO+
 - [WIP] bug: diagonal movement is still there
@@ -12,7 +13,6 @@
 - win state (an actual one -- could think of something better)
 - splash polish
 - additional room props
-- [WIP] text being written animation
 - exclamation mark on text trigger
 - character animations
 
