@@ -12,7 +12,7 @@
 - win state (an actual one -- could think of something better)
 - splash polish
 - additional room props
-- text being written animation
+- [WIP] text being written animation
 - exclamation mark on text trigger
 - character animations
 
