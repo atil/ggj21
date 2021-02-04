@@ -88,6 +88,12 @@ public class Player : MonoBehaviour
             yield break;
         }
 
+        if (target.x > 4f || target.x < -6 || target.y > 5 || target.y < -5)
+        {
+            _isMoving = false; // Out of bounds
+            yield break;
+        }
+
         StartCoroutine(PlayFootstepParticleCoroutine());
         Game.Sfx.PlayFootstep();
 
