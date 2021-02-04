@@ -4,6 +4,7 @@
 - bug: character being stuck
   - it was _isMoving never being cleared in some cases where we stop the coroutine on the moment of traversal (not 100% sure though, hard to repro)
 - text being written animation
+- additional room props
 
 +TODO+
 - [WIP] bug: diagonal movement is still there
@@ -12,7 +13,9 @@
 - bug: the last message not seen in some cases
 - win state (an actual one -- could think of something better)
 - splash polish
-- additional room props
 - exclamation mark on text trigger
 - character animations
+
++EXTRA+
+- additional log text on floor
 
