@@ -55,7 +55,7 @@ public class EndGameTrigger : MonoBehaviour
         float srcAlpha = 0f;
         float targetAlpha = 1f;
         
-        const float duration = 5f;
+        const float duration = 6f;
         for (float f = 0; f < duration; f += Time.deltaTime)
         {
             float t = FadeOutCurve.Evaluate(f / duration);

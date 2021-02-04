@@ -10,8 +10,6 @@ public class TextShowOnCollision : MonoBehaviour
     public AudioSource Sound;
     public bool PlayOnce;
 
-    public BoxCollider2D TriggerToEnable = null;
-
     private const float kTextShownInterval = 0.05f;
 
     private GameObject _textParent;
@@ -23,7 +21,6 @@ public class TextShowOnCollision : MonoBehaviour
 
     void Start()
     {
-
         _textParent = FindObjectOfType<Game>().TextParent;
         _textUI = _textParent.GetComponentInChildren<TextMeshProUGUI>();
         _collider = GetComponent<BoxCollider2D>();
@@ -58,10 +55,6 @@ public class TextShowOnCollision : MonoBehaviour
             {
                 Sound.Play();
                 _isPlayed = true;
-                if (TriggerToEnable != null)
-                {
-                    TriggerToEnable.gameObject.SetActive(true);
-                }
             }
         }
 
