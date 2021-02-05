@@ -69,6 +69,11 @@ public class TextShowOnCollision : MonoBehaviour
 
     private IEnumerator ShowText()
     {
+        foreach (var textShow in FindObjectsOfType<ShowTextAction>())
+        {
+            textShow.CancelShow();
+        }
+        
         var currLength = 1;
         var currText = "";
         var lastPart = "";
