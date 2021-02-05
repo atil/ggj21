@@ -61,6 +61,7 @@
      <Compile Include="Assets\Scripts\ChangeVisibilityOnCollision.cs" />
      <Compile Include="Assets\Scripts\Events\ChangeTextAction.cs" />
      <Compile Include="Assets\Scripts\Events\DisableObjectAction.cs" />
+     <Compile Include="Assets\Scripts\Events\EnableObjectAction.cs" />
      <Compile Include="Assets\Scripts\Events\EndGameTrigger.cs" />
      <Compile Include="Assets\Scripts\Events\EventAction.cs" />
      <Compile Include="Assets\Scripts\Events\IconColorChangeAction.cs" />

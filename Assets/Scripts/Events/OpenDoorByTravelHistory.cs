@@ -8,6 +8,7 @@ public class OpenDoorByTravelHistory : EventAction
 
 	public List<string> ExpectedTravel;
 	public Game Game;
+	public GameObject LightRay;
 	
 	public Tilemap DoorTilemap;
 	public Vector2Int DoorStart;
@@ -40,6 +41,7 @@ public class OpenDoorByTravelHistory : EventAction
 			}
 
 			_isOpened = true;
+			LightRay.SetActive(true);
 		}
 	}
 }
