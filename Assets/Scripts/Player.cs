@@ -24,6 +24,9 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+        // Vector3Int cellPos = Game.Grid.WorldToCell(transform.position);
+        // Debug.Log(cellPos);
+        
         if (Game.IsTraversing || Game.EndGameTriggered)
         {
             return;
@@ -61,10 +64,16 @@ public class Player : MonoBehaviour
         _isMoving = true;
         Vector2 src = transform.position;
         
-        Vector3 offset = new Vector3(0.49f, -0.49f, 0.0f);
-        Vector3Int cellPos = Game.Grid.WorldToCell(transform.position + offset);
-        cellPos += (Vector3Int) dir;
-        Vector2 target = Game.Grid.CellToWorld(cellPos) - offset;
+        Vector3 offset = new Vector3(0.49f, -0.49f, 0.0f); // From top left to the middle
+        Vector3 offsetPosition = transform.position + offset;
+        offsetPosition.x = Mathf.RoundToInt(offsetPosition.x);
+        offsetPosition.y = Mathf.RoundToInt(offsetPosition.y);
+        offsetPosition.z = Mathf.RoundToInt(offsetPosition.z);
+        
+        Vector3Int srcCellPos = Game.Grid.WorldToCell(offsetPosition); // Get the cellPos using the middle
+        Vector3Int targetCellPos = srcCellPos + (Vector3Int) dir;
+        Vector2 target = Game.Grid.CellToWorld(targetCellPos) - offset;
+        
         TilemapCollider2D currentCollider = Game.CurrentRoom.transform.Find("Collision").GetComponent<TilemapCollider2D>();
         if (currentCollider.OverlapPoint(target))
         {
@@ -76,6 +85,12 @@ public class Player : MonoBehaviour
         if (currentCollider2.OverlapPoint(target))
         {
             _isMoving = false; // Can't move into the collider
+            yield break;
+        }
+
+        if (target.x > 4f || target.x < -6 || target.y > 5 || target.y < -5)
+        {
+            _isMoving = false; // Out of bounds
             yield break;
         }
 
