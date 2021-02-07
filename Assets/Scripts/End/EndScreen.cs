@@ -10,38 +10,34 @@ public class EndScreen : MonoBehaviour
     public Image Cover;
     public AnimationCurve CoverCurve;
 
-    private readonly string[] _lines = new[]
-    {
-        "One puzzle's end",
-        "leads to another.",
-        "The wheel of life.",
-    };
     
     private IEnumerator Start()
     {
         yield return new WaitForSeconds(1f);
 
-        foreach (string line in _lines)
+        yield return StartCoroutine(ShowText(new[]
         {
-            foreach (char ch in line)
-            {
-                Text.text += ch;
-                yield return new WaitForSeconds(0.05f); // Wait per char
-            }
-            
-            yield return new WaitForSeconds(0.2f); // Wait per line
-            Text.text += "\n";
-        }
+            "One puzzle's end",
+            "leads to another.",
+            "The wheel of life.",
+        }));
         
         yield return new WaitForSeconds(2.5f);
 
-        const string s = "Thank you for playing";
-        Text.text = "";
-        foreach (char ch in s)
+        yield return StartCoroutine(ShowText(new[]
         {
-            Text.text += ch;
-            yield return new WaitForSeconds(0.05f); // Wait per char
-        }
+            "Made by Torreng North",
+            "Enes Ugur Sekerci: Design / Programming",
+            "Atil Kockar: Design / Programming",
+            "Damla Kockar: Music / SFX",
+        }));
+        
+        yield return new WaitForSeconds(1.5f);
+        
+        yield return StartCoroutine(ShowText(new[]
+        {
+            "Thank you for playing",
+        }));
 
         yield return new WaitForSeconds(1.5f);
         const float coverDuration = 1f;
@@ -54,6 +50,21 @@ public class EndScreen : MonoBehaviour
         }
 
         SceneManager.LoadScene("Splash");
+    }
 
+    private IEnumerator ShowText(string[] lines)
+    {
+        Text.text = "";
+        foreach (string line in lines)
+        {
+            foreach (char ch in line)
+            {
+                Text.text += ch;
+                yield return new WaitForSeconds(0.05f); // Wait per char
+            }
+            
+            yield return new WaitForSeconds(0.2f); // Wait per line
+            Text.text += "\n";
+        }
     }
 }
