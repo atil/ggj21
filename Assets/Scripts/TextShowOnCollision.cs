@@ -6,9 +6,10 @@ public class TextShowOnCollision : MonoBehaviour
 {
     [TextArea(4, 4)]
     public string Text;
+    public bool ShowOnce;
 
     public AudioSource Sound;
-    public bool PlayOnce;
+    public bool PlaySoundOnce;
 
     public GameObject SpeechBubbleIcon;
 
@@ -20,6 +21,7 @@ public class TextShowOnCollision : MonoBehaviour
     
     private bool _onTrigger;
     private bool _isPlayed;
+    private bool _hasShown;
 
     void Start()
     {
@@ -28,6 +30,7 @@ public class TextShowOnCollision : MonoBehaviour
         _collider = GetComponent<BoxCollider2D>();
         _onTrigger = false;
         _isPlayed = false;
+        _hasShown = false;
     }
 
     private void Update()
@@ -51,9 +54,13 @@ public class TextShowOnCollision : MonoBehaviour
         if (!_onTrigger && onTriggerCurrentFrame)
         {
             _onTrigger = true;
-            StartCoroutine(ShowText());
-            
-            if (!PlayOnce || !_isPlayed)
+            if (!ShowOnce || !_hasShown)
+            {
+                StartCoroutine(ShowText());
+                _hasShown = true;
+            }
+
+            if (!PlaySoundOnce || !_isPlayed)
             {
                 Sound.Play();
                 _isPlayed = true;

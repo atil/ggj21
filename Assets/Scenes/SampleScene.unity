@@ -5031,6 +5031,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
+      propertyPath: PlaySoundOnce
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
       propertyPath: SpeechBubbleIcon
       value: 
       objectReference: {fileID: 1251823712}
@@ -5141,6 +5146,11 @@ PrefabInstance:
     - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
       propertyPath: PlayOnce
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: PlaySoundOnce
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
@@ -5675,6 +5685,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
+      propertyPath: ShowOnce
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: PlaySoundOnce
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
       propertyPath: TriggerToEnable
       value: 
       objectReference: {fileID: 146453582}
@@ -5771,31 +5791,10 @@ PrefabInstance:
     - target: {fileID: 5162172688346046077, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
       propertyPath: m_Name
-      value: TextTriggerLog
+      value: LogEntry
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: baafad4748333234f9c9b281de1cb7fa, type: 3}
---- !u!1 &176542493 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5162172688346046077, guid: baafad4748333234f9c9b281de1cb7fa,
-    type: 3}
-  m_PrefabInstance: {fileID: 176542492}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &176542494
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 176542493}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9577948b8b8012d40a4b00b0b797cbf1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObjectToEnable: {fileID: 0}
-  ObjectToDisable: {fileID: 255508270}
-  PlayOnce: 1
 --- !u!1001 &207369431
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12862,6 +12861,11 @@ PrefabInstance:
       objectReference: {fileID: 1887715976}
     - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
+      propertyPath: PlaySoundOnce
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
       propertyPath: SpeechBubbleIcon
       value: 
       objectReference: {fileID: 1854043132}
@@ -12953,7 +12957,7 @@ GameObject:
   - component: {fileID: 255508272}
   - component: {fileID: 255508271}
   m_Layer: 0
-  m_Name: IconA
+  m_Name: LogIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13176,6 +13180,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
+      propertyPath: ShowOnce
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: PlaySoundOnce
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
       propertyPath: TriggerToEnable
       value: 
       objectReference: {fileID: 146453582}
@@ -13217,7 +13231,7 @@ PrefabInstance:
     - target: {fileID: 5162172688346046074, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.41
+      value: 2.56
       objectReference: {fileID: 0}
     - target: {fileID: 5162172688346046074, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
@@ -13272,31 +13286,10 @@ PrefabInstance:
     - target: {fileID: 5162172688346046077, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
       propertyPath: m_Name
-      value: TextTriggerLog
+      value: LogEntry
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: baafad4748333234f9c9b281de1cb7fa, type: 3}
---- !u!1 &289058861 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5162172688346046077, guid: baafad4748333234f9c9b281de1cb7fa,
-    type: 3}
-  m_PrefabInstance: {fileID: 289058860}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &289058862
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 289058861}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9577948b8b8012d40a4b00b0b797cbf1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObjectToEnable: {fileID: 0}
-  ObjectToDisable: {fileID: 1695853250}
-  PlayOnce: 1
 --- !u!1 &293059750
 GameObject:
   m_ObjectHideFlags: 0
@@ -13308,7 +13301,7 @@ GameObject:
   - component: {fileID: 293059752}
   - component: {fileID: 293059751}
   m_Layer: 0
-  m_Name: IconA
+  m_Name: LogIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13373,7 +13366,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 293059750}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.0499992, y: -0.8499985, z: 0}
+  m_LocalPosition: {x: -4.5, y: -1.6300011, z: 0}
   m_LocalScale: {x: 0.35, y: 0.35, z: 1}
   m_Children: []
   m_Father: {fileID: 1000090250}
@@ -19013,7 +19006,7 @@ PrefabInstance:
     - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
       propertyPath: Text
-      value: "Log 2/10: I was a failure to you.\nAs you said, I always choose \nthe
+      value: "Log 2/8: I was a failure to you.\nAs you said, I always choose \nthe
         wrong path"
       objectReference: {fileID: 0}
     - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
@@ -19024,6 +19017,16 @@ PrefabInstance:
     - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
       propertyPath: PlayOnce
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: ShowOnce
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: PlaySoundOnce
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
@@ -19124,31 +19127,10 @@ PrefabInstance:
     - target: {fileID: 5162172688346046077, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
       propertyPath: m_Name
-      value: TextTriggerLog
+      value: LogEntry
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: baafad4748333234f9c9b281de1cb7fa, type: 3}
---- !u!1 &408471172 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5162172688346046077, guid: baafad4748333234f9c9b281de1cb7fa,
-    type: 3}
-  m_PrefabInstance: {fileID: 408471171}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &408471173
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 408471172}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9577948b8b8012d40a4b00b0b797cbf1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObjectToEnable: {fileID: 0}
-  ObjectToDisable: {fileID: 1521001140}
-  PlayOnce: 1
 --- !u!1 &411234058
 GameObject:
   m_ObjectHideFlags: 0
@@ -19417,6 +19399,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
+      propertyPath: ShowOnce
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: PlaySoundOnce
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
       propertyPath: TriggerToEnable
       value: 
       objectReference: {fileID: 146453582}
@@ -19513,31 +19505,10 @@ PrefabInstance:
     - target: {fileID: 5162172688346046077, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
       propertyPath: m_Name
-      value: TextTriggerLog
+      value: LogEntry
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: baafad4748333234f9c9b281de1cb7fa, type: 3}
---- !u!1 &465470181 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5162172688346046077, guid: baafad4748333234f9c9b281de1cb7fa,
-    type: 3}
-  m_PrefabInstance: {fileID: 465470180}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &465470182
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 465470181}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9577948b8b8012d40a4b00b0b797cbf1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObjectToEnable: {fileID: 0}
-  ObjectToDisable: {fileID: 1820400142}
-  PlayOnce: 1
 --- !u!1001 &492170010
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19565,6 +19536,11 @@ PrefabInstance:
     - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
       propertyPath: PlayOnce
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: PlaySoundOnce
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
@@ -19694,6 +19670,11 @@ PrefabInstance:
     - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
       propertyPath: PlayOnce
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: PlaySoundOnce
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
@@ -20435,6 +20416,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
+      propertyPath: ShowOnce
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: PlaySoundOnce
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
       propertyPath: TriggerToEnable
       value: 
       objectReference: {fileID: 146453582}
@@ -20531,31 +20522,10 @@ PrefabInstance:
     - target: {fileID: 5162172688346046077, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
       propertyPath: m_Name
-      value: TextTriggerLog
+      value: LogEntry
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: baafad4748333234f9c9b281de1cb7fa, type: 3}
---- !u!1 &553424959 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5162172688346046077, guid: baafad4748333234f9c9b281de1cb7fa,
-    type: 3}
-  m_PrefabInstance: {fileID: 553424958}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &553424960
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 553424959}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9577948b8b8012d40a4b00b0b797cbf1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObjectToEnable: {fileID: 0}
-  ObjectToDisable: {fileID: 596794455}
-  PlayOnce: 1
 --- !u!1001 &561372243
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28433,7 +28403,7 @@ GameObject:
   - component: {fileID: 596794457}
   - component: {fileID: 596794456}
   m_Layer: 0
-  m_Name: IconA (1)
+  m_Name: LogIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28529,6 +28499,16 @@ PrefabInstance:
     - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
       propertyPath: PlayOnce
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: ShowOnce
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: PlaySoundOnce
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
@@ -28629,31 +28609,10 @@ PrefabInstance:
     - target: {fileID: 5162172688346046077, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
       propertyPath: m_Name
-      value: TextTriggerLog
+      value: LogEntry
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: baafad4748333234f9c9b281de1cb7fa, type: 3}
---- !u!1 &625909095 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5162172688346046077, guid: baafad4748333234f9c9b281de1cb7fa,
-    type: 3}
-  m_PrefabInstance: {fileID: 625909094}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &625909096
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 625909095}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9577948b8b8012d40a4b00b0b797cbf1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObjectToEnable: {fileID: 0}
-  ObjectToDisable: {fileID: 1483961300}
-  PlayOnce: 1
 --- !u!1 &631965261
 GameObject:
   m_ObjectHideFlags: 0
@@ -29048,6 +29007,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
+      propertyPath: PlaySoundOnce
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
       propertyPath: SpeechBubbleIcon
       value: 
       objectReference: {fileID: 1251823712}
@@ -29158,6 +29122,11 @@ PrefabInstance:
     - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
       propertyPath: PlayOnce
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: PlaySoundOnce
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
@@ -34616,7 +34585,7 @@ GameObject:
   - component: {fileID: 1483961302}
   - component: {fileID: 1483961301}
   m_Layer: 0
-  m_Name: IconA
+  m_Name: LogIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34805,7 +34774,7 @@ GameObject:
   - component: {fileID: 1521001142}
   - component: {fileID: 1521001141}
   m_Layer: 0
-  m_Name: IconA
+  m_Name: LogIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -40365,6 +40334,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
+      propertyPath: ShowOnce
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: PlaySoundOnce
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
       propertyPath: TriggerToEnable
       value: 
       objectReference: {fileID: 146453582}
@@ -40401,12 +40380,12 @@ PrefabInstance:
     - target: {fileID: 5162172688346046074, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.05
+      value: -4.5
       objectReference: {fileID: 0}
     - target: {fileID: 5162172688346046074, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.85
+      value: -1.63
       objectReference: {fileID: 0}
     - target: {fileID: 5162172688346046074, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
@@ -40461,31 +40440,10 @@ PrefabInstance:
     - target: {fileID: 5162172688346046077, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
       propertyPath: m_Name
-      value: TextTriggerLog
+      value: LogEntry
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: baafad4748333234f9c9b281de1cb7fa, type: 3}
---- !u!1 &1640135710 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5162172688346046077, guid: baafad4748333234f9c9b281de1cb7fa,
-    type: 3}
-  m_PrefabInstance: {fileID: 1640135709}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1640135711
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1640135710}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9577948b8b8012d40a4b00b0b797cbf1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObjectToEnable: {fileID: 0}
-  ObjectToDisable: {fileID: 293059750}
-  PlayOnce: 1
 --- !u!1001 &1641875818
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40515,6 +40473,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
+      propertyPath: PlaySoundOnce
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
       propertyPath: SpeechBubbleIcon
       value: 
       objectReference: {fileID: 1854043132}
@@ -40536,12 +40499,12 @@ PrefabInstance:
     - target: {fileID: 5162172688346046074, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.502
+      value: -2.5
       objectReference: {fileID: 0}
     - target: {fileID: 5162172688346046074, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.049999237
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5162172688346046074, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
@@ -41115,7 +41078,7 @@ GameObject:
   - component: {fileID: 1695853252}
   - component: {fileID: 1695853251}
   m_Layer: 0
-  m_Name: IconA (1)
+  m_Name: LogIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -59984,6 +59947,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
+      propertyPath: PlaySoundOnce
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
       propertyPath: SpeechBubbleIcon
       value: 
       objectReference: {fileID: 1251823712}
@@ -60005,12 +59973,12 @@ PrefabInstance:
     - target: {fileID: 5162172688346046074, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.66
+      value: -0.59
       objectReference: {fileID: 0}
     - target: {fileID: 5162172688346046074, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.19
+      value: -0.54
       objectReference: {fileID: 0}
     - target: {fileID: 5162172688346046074, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
@@ -60080,7 +60048,7 @@ GameObject:
   - component: {fileID: 1820400144}
   - component: {fileID: 1820400143}
   m_Layer: 0
-  m_Name: IconA (1)
+  m_Name: LogIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -60321,6 +60289,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
+      propertyPath: ShowOnce
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: PlaySoundOnce
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
       propertyPath: TriggerToEnable
       value: 
       objectReference: {fileID: 146453582}
@@ -60417,31 +60395,10 @@ PrefabInstance:
     - target: {fileID: 5162172688346046077, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
       propertyPath: m_Name
-      value: TextTriggerLog
+      value: LogEntry
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: baafad4748333234f9c9b281de1cb7fa, type: 3}
---- !u!1 &1831153981 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5162172688346046077, guid: baafad4748333234f9c9b281de1cb7fa,
-    type: 3}
-  m_PrefabInstance: {fileID: 1831153979}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1831153982
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1831153981}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9577948b8b8012d40a4b00b0b797cbf1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObjectToEnable: {fileID: 0}
-  ObjectToDisable: {fileID: 1928124283}
-  PlayOnce: 1
 --- !u!1 &1846546201
 GameObject:
   m_ObjectHideFlags: 0
@@ -61199,7 +61156,7 @@ GameObject:
   - component: {fileID: 1928124284}
   - component: {fileID: 1928124285}
   m_Layer: 0
-  m_Name: IconA
+  m_Name: LogIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -61576,6 +61533,11 @@ PrefabInstance:
     - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
       propertyPath: PlayOnce
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: PlaySoundOnce
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
