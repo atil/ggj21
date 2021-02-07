@@ -13,7 +13,5 @@
 - splash polish
 - exclamation mark on text trigger
 - character animations
-
-+EXTRA TODO+
 - additional log text on floor
 
