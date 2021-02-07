@@ -11,7 +11,7 @@
 - bug: silly wonky-wonky movement when the player tries to leave the room right after entering it
 
 +TODO+
-- win state (an actual one -- could think of something better)
+- [WIP] win state (an actual one -- could think of something better)
 - splash polish
 - exclamation mark on text trigger
 - character animations
