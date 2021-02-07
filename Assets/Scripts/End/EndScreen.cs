@@ -18,7 +18,7 @@ public class EndScreen : MonoBehaviour
         yield return StartCoroutine(ShowText(new[]
         {
             "One puzzle's end",
-            "leads to another.",
+            "leads to the beginning of another.",
             "The wheel of life.",
         }));
         
