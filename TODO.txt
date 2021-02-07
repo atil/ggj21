@@ -9,10 +9,10 @@
 - bug: sometimes after down transition, the first movement moves two squares
 - bug: the last message not seen in some cases
 - bug: silly wonky-wonky movement when the player tries to leave the room right after entering it
+- win state (an actual one -- could think of something better)
 
 +TODO+
-- [WIP] win state (an actual one -- could think of something better)
-- splash polish
+- [WIP] splash polish
 - exclamation mark on text trigger
 - character animations
 
