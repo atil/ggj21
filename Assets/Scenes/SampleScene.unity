@@ -59399,12 +59399,14 @@ PrefabInstance:
     - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
       propertyPath: Text
-      value: 'Then it''s overcome.
+      value: 'Daunted no more,
 
-        Only to be replaced by the next.
+        You see the way to overcome.
 
-        Such
-        is the wheel of life.'
+        It
+        is done.
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}

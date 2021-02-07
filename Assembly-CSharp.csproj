@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\ChangeVisibilityOnCollision.cs" />
+     <Compile Include="Assets\Scripts\End\EndScreen.cs" />
      <Compile Include="Assets\Scripts\Events\ChangeTextAction.cs" />
      <Compile Include="Assets\Scripts\Events\DisableObjectAction.cs" />
      <Compile Include="Assets\Scripts\Events\EnableObjectAction.cs" />
