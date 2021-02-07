@@ -5711,7 +5711,7 @@ PrefabInstance:
     - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
       propertyPath: Text
-      value: "Log 3/8: But maybe,\nyou were the one who \nhad wrong expectations."
+      value: "[3/8] \"But maybe,\nyou were the one who \nhad wrong expectations.\""
       objectReference: {fileID: 0}
     - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
@@ -13243,12 +13243,12 @@ PrefabInstance:
     - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
       propertyPath: Text
-      value: 'Log 8/8: You were not
+      value: '[8/8] "You were not
 
         a True King to our lands.
 
         But
-        you''ll always be my Master'
+        you''ll always be my Master"'
       objectReference: {fileID: 0}
     - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
@@ -19108,8 +19108,8 @@ PrefabInstance:
     - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
       propertyPath: Text
-      value: "Log 2/8: I was a failure to you.\nAs you said, I always choose \nthe
-        wrong path"
+      value: "[2/8] \"I was a failure to you.\nAs you said, I always chose \nthe
+        wrong path\""
       objectReference: {fileID: 0}
     - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
@@ -19508,7 +19508,7 @@ PrefabInstance:
     - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
       propertyPath: Text
-      value: "Log 6/8: Master, I am sorry \nto lock you into here.\nI had to do it."
+      value: "[6/8] \"Master, I am sorry \nto lock you in here.\nI had to do it.\""
       objectReference: {fileID: 0}
     - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
@@ -20580,12 +20580,12 @@ PrefabInstance:
     - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
       propertyPath: Text
-      value: 'Log 7/8: But I am here
+      value: '[7/8] "But I am here
 
         with you, with mysteries,
 
         to
-        the eternity.'
+        the eternity."'
       objectReference: {fileID: 0}
     - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
@@ -28687,12 +28687,12 @@ PrefabInstance:
     - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
       propertyPath: Text
-      value: 'Log 4/8: This time,
+      value: '[4/8] "This time,
 
         I created this garden.
 
         Did you
-        like it?'
+        like it?"'
       objectReference: {fileID: 0}
     - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
@@ -40660,12 +40660,12 @@ PrefabInstance:
     - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
       propertyPath: Text
-      value: 'Log 5/8: I created
+      value: '[5/8] "I''ve built
 
         this garden to save our people.
 
         If
-        you are here, we are free!'
+        you are here, we are free!"'
       objectReference: {fileID: 0}
     - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
@@ -60699,12 +60699,12 @@ PrefabInstance:
     - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
       propertyPath: Text
-      value: 'Log 1/8: Master,
+      value: '[1/8] "Master,
 
         if you are reading this,
 
         I achieved
-        this time...'
+        it this time"'
       objectReference: {fileID: 0}
     - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
