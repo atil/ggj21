@@ -12,10 +12,8 @@
 - win state (an actual one -- could think of something better)
 - splash polish
 - exclamation mark on text trigger
-
-+TODO+
 - character animations
 
-+EXTRA+
++EXTRA TODO+
 - additional log text on floor
 

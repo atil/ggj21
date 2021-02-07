@@ -26,11 +26,8 @@ public class SplashScreen : MonoBehaviour
 
     public AudioSource Audio;
 
-    private float _currTime;
-
     IEnumerator Start()
     {
-        _currTime = 0;
         foreach (Subtitle subtitle in Subtitles)
         {
             StartCoroutine(SubtitleCoroutine(subtitle));
