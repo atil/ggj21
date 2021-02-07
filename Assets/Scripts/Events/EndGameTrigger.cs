@@ -69,6 +69,6 @@ public class EndGameTrigger : MonoBehaviour
             yield return null;
         }
 
-        SceneManager.LoadScene("Splash");
+        SceneManager.LoadScene("End");
     }
 }
