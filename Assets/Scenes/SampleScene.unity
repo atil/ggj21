@@ -61405,6 +61405,7 @@ MonoBehaviour:
   ParticlePrefab: {fileID: 74748219}
   ParticlesParent: {fileID: 1822238957}
   CanTraverse: 1
+  Animator: {fileID: 761766386}
 --- !u!4 &1937524722
 Transform:
   m_ObjectHideFlags: 0
