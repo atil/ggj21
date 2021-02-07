@@ -6,6 +6,7 @@ public class TextShowOnCollision : MonoBehaviour
 {
     [TextArea(4, 4)]
     public string Text;
+    public Color TextColor = Color.white;
     public bool ShowOnce;
 
     public AudioSource Sound;
@@ -71,6 +72,7 @@ public class TextShowOnCollision : MonoBehaviour
         {
             _textParent.gameObject.SetActive(false);
             _textUI.SetText("");
+            _textUI.color = Color.white;
             if (SpeechBubbleIcon != null)
             { 
                 SpeechBubbleIcon.SetActive(false);
@@ -92,6 +94,7 @@ public class TextShowOnCollision : MonoBehaviour
         var lastPart = "";
         
         _textUI.SetText("");
+        _textUI.color = TextColor;
         _textParent.gameObject.SetActive(true);
         if (SpeechBubbleIcon != null)
         {

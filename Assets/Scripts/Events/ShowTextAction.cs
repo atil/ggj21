@@ -6,6 +6,7 @@ public class ShowTextAction : EventAction
 {
     [TextArea(4, 4)]
     public string Text;
+    public Color TextColor = Color.white;
     public float ShowDuration;
     public bool ShowOnce;
     public GameObject SpeechBubbleIcon;
@@ -48,6 +49,7 @@ public class ShowTextAction : EventAction
         }
         _textParent.gameObject.SetActive(false);
         _textUI.SetText("");
+        _textUI.color = Color.white;
         if (SpeechBubbleIcon != null)
         {
             SpeechBubbleIcon.SetActive(false);
@@ -62,6 +64,7 @@ public class ShowTextAction : EventAction
 
         _hasShown = true;
         _textUI.SetText("");
+        _textUI.color = TextColor;
         _textParent.gameObject.SetActive(true);
         if (SpeechBubbleIcon != null)
         {
@@ -82,6 +85,7 @@ public class ShowTextAction : EventAction
         yield return new WaitForSeconds(ShowDuration);
         _textParent.gameObject.SetActive(false);
         _textUI.SetText("");
+        _textUI.color = Color.white;
         if (SpeechBubbleIcon != null)
         {
             SpeechBubbleIcon.SetActive(false);

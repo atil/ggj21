@@ -5031,6 +5031,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
+      propertyPath: TextColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: TextColor.b
+      value: 0.34117648
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: TextColor.g
+      value: 0.34509805
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: TextColor.r
+      value: 0.25882354
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
       propertyPath: PlaySoundOnce
       value: 1
       objectReference: {fileID: 0}
@@ -5147,6 +5167,26 @@ PrefabInstance:
         type: 3}
       propertyPath: PlayOnce
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: TextColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: TextColor.b
+      value: 0.34117648
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: TextColor.g
+      value: 0.34509805
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: TextColor.r
+      value: 0.25882354
       objectReference: {fileID: 0}
     - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
@@ -5687,6 +5727,26 @@ PrefabInstance:
         type: 3}
       propertyPath: ShowOnce
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: TextColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: TextColor.b
+      value: 0.34509805
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: TextColor.g
+      value: 0.47450984
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: TextColor.r
+      value: 0.7490196
       objectReference: {fileID: 0}
     - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
@@ -12863,6 +12923,26 @@ PrefabInstance:
       objectReference: {fileID: 1887715976}
     - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
+      propertyPath: TextColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: TextColor.b
+      value: 0.54509807
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: TextColor.g
+      value: 0.34901962
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: TextColor.r
+      value: 0.4431373
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
       propertyPath: PlaySoundOnce
       value: 1
       objectReference: {fileID: 0}
@@ -13184,6 +13264,26 @@ PrefabInstance:
         type: 3}
       propertyPath: ShowOnce
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: TextColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: TextColor.b
+      value: 0.34509805
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: TextColor.g
+      value: 0.47450984
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: TextColor.r
+      value: 0.7490196
       objectReference: {fileID: 0}
     - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
@@ -19028,6 +19128,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
+      propertyPath: TextColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: TextColor.b
+      value: 0.34509805
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: TextColor.g
+      value: 0.47450984
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: TextColor.r
+      value: 0.7490196
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
       propertyPath: PlaySoundOnce
       value: 1
       objectReference: {fileID: 0}
@@ -19329,6 +19449,7 @@ MonoBehaviour:
     Final destination for all men.
 
     It beckons.'
+  TextColor: {r: 1, g: 1, b: 1, a: 1}
   ShowDuration: 2
   ShowOnce: 1
   SpeechBubbleIcon: {fileID: 1854043132}
@@ -19403,6 +19524,26 @@ PrefabInstance:
         type: 3}
       propertyPath: ShowOnce
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: TextColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: TextColor.b
+      value: 0.34509805
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: TextColor.g
+      value: 0.47450984
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: TextColor.r
+      value: 0.7490196
       objectReference: {fileID: 0}
     - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
@@ -19542,6 +19683,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
+      propertyPath: TextColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: TextColor.b
+      value: 0.34509805
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: TextColor.g
+      value: 0.47450984
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: TextColor.r
+      value: 0.7490196
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
       propertyPath: PlaySoundOnce
       value: 1
       objectReference: {fileID: 0}
@@ -19673,6 +19834,26 @@ PrefabInstance:
         type: 3}
       propertyPath: PlayOnce
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: TextColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: TextColor.b
+      value: 0.34117648
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: TextColor.g
+      value: 0.34509805
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: TextColor.r
+      value: 0.25882354
       objectReference: {fileID: 0}
     - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
@@ -20420,6 +20601,26 @@ PrefabInstance:
         type: 3}
       propertyPath: ShowOnce
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: TextColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: TextColor.b
+      value: 0.34509805
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: TextColor.g
+      value: 0.47450984
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: TextColor.r
+      value: 0.7490196
       objectReference: {fileID: 0}
     - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
@@ -28510,6 +28711,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
+      propertyPath: TextColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: TextColor.b
+      value: 0.34509805
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: TextColor.g
+      value: 0.47450984
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: TextColor.r
+      value: 0.7490196
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
       propertyPath: PlaySoundOnce
       value: 1
       objectReference: {fileID: 0}
@@ -28669,6 +28890,7 @@ MonoBehaviour:
     How is this the same place?
 
     Such madness.'
+  TextColor: {r: 1, g: 1, b: 1, a: 1}
   ShowDuration: 2
   ShowOnce: 1
   SpeechBubbleIcon: {fileID: 1251823712}
@@ -29009,6 +29231,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
+      propertyPath: TextColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: TextColor.b
+      value: 0.27450982
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: TextColor.g
+      value: 0.28627452
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: TextColor.r
+      value: 0.32156864
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
       propertyPath: PlaySoundOnce
       value: 1
       objectReference: {fileID: 0}
@@ -29125,6 +29367,26 @@ PrefabInstance:
         type: 3}
       propertyPath: PlayOnce
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: TextColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: TextColor.b
+      value: 0.34509805
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: TextColor.g
+      value: 0.47450984
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: TextColor.r
+      value: 0.7490196
       objectReference: {fileID: 0}
     - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
@@ -34739,6 +35001,7 @@ MonoBehaviour:
     The tree greets you
 
     with a purple "Hello"'
+  TextColor: {r: 1, g: 1, b: 1, a: 1}
   ShowDuration: 2
   ShowOnce: 1
   SpeechBubbleIcon: {fileID: 1854043132}
@@ -34928,6 +35191,7 @@ MonoBehaviour:
     Slow down and remember
 
     what goes where.'
+  TextColor: {r: 1, g: 1, b: 1, a: 1}
   ShowDuration: 2
   ShowOnce: 1
   SpeechBubbleIcon: {fileID: 1251823712}
@@ -40420,6 +40684,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
+      propertyPath: TextColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: TextColor.b
+      value: 0.34509805
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: TextColor.g
+      value: 0.47450984
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: TextColor.r
+      value: 0.7490196
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
       propertyPath: PlaySoundOnce
       value: 1
       objectReference: {fileID: 0}
@@ -40551,6 +40835,26 @@ PrefabInstance:
         type: 3}
       propertyPath: PlayOnce
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: TextColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: TextColor.b
+      value: 0.34117648
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: TextColor.g
+      value: 0.34509805
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: TextColor.r
+      value: 0.25882354
       objectReference: {fileID: 0}
     - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
@@ -60052,6 +60356,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
+      propertyPath: TextColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: TextColor.b
+      value: 0.34117648
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: TextColor.g
+      value: 0.34509805
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: TextColor.r
+      value: 0.25882354
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
       propertyPath: PlaySoundOnce
       value: 1
       objectReference: {fileID: 0}
@@ -60396,6 +60720,26 @@ PrefabInstance:
         type: 3}
       propertyPath: ShowOnce
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: TextColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: TextColor.b
+      value: 0.34509805
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: TextColor.g
+      value: 0.47450984
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: TextColor.r
+      value: 0.7490196
       objectReference: {fileID: 0}
     - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
@@ -61639,6 +61983,26 @@ PrefabInstance:
         type: 3}
       propertyPath: PlayOnce
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: TextColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: TextColor.b
+      value: 0.34117648
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: TextColor.g
+      value: 0.34509805
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
+        type: 3}
+      propertyPath: TextColor.r
+      value: 0.25882354
       objectReference: {fileID: 0}
     - target: {fileID: 5162172688346046072, guid: baafad4748333234f9c9b281de1cb7fa,
         type: 3}
