@@ -8,6 +8,7 @@ public class ShowTextAction : EventAction
     public string Text;
     public float ShowDuration;
     public bool ShowOnce;
+    public GameObject SpeechBubbleIcon;
 
     private const float kTextShownInterval = 0.05f;
 
@@ -47,7 +48,10 @@ public class ShowTextAction : EventAction
         }
         _textParent.gameObject.SetActive(false);
         _textUI.SetText("");
-        
+        if (SpeechBubbleIcon != null)
+        {
+            SpeechBubbleIcon.SetActive(false);
+        }
     }
     
     private IEnumerator ShowText()
@@ -59,6 +63,10 @@ public class ShowTextAction : EventAction
         _hasShown = true;
         _textUI.SetText("");
         _textParent.gameObject.SetActive(true);
+        if (SpeechBubbleIcon != null)
+        {
+            SpeechBubbleIcon.SetActive(true);
+        }
         
         while (currLength <= Text.Length)
         {
@@ -74,5 +82,9 @@ public class ShowTextAction : EventAction
         yield return new WaitForSeconds(ShowDuration);
         _textParent.gameObject.SetActive(false);
         _textUI.SetText("");
+        if (SpeechBubbleIcon != null)
+        {
+            SpeechBubbleIcon.SetActive(false);
+        }
     }
 }

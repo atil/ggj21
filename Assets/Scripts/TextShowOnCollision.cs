@@ -10,6 +10,8 @@ public class TextShowOnCollision : MonoBehaviour
     public AudioSource Sound;
     public bool PlayOnce;
 
+    public GameObject SpeechBubbleIcon;
+
     private const float kTextShownInterval = 0.05f;
 
     private GameObject _textParent;
@@ -62,6 +64,10 @@ public class TextShowOnCollision : MonoBehaviour
         {
             _textParent.gameObject.SetActive(false);
             _textUI.SetText("");
+            if (SpeechBubbleIcon != null)
+            { 
+                SpeechBubbleIcon.SetActive(false);
+            }
         }
 
         _onTrigger = onTriggerCurrentFrame;
@@ -80,6 +86,10 @@ public class TextShowOnCollision : MonoBehaviour
         
         _textUI.SetText("");
         _textParent.gameObject.SetActive(true);
+        if (SpeechBubbleIcon != null)
+        {
+            SpeechBubbleIcon.SetActive(true);
+        }
         
         while (currLength <= Text.Length && _onTrigger)
         {
