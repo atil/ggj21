@@ -30,6 +30,12 @@ public class SplashScreen : MonoBehaviour
 
     IEnumerator Start()
     {
+        _currTime = 0;
+        foreach (Subtitle subtitle in Subtitles)
+        {
+            StartCoroutine(SubtitleCoroutine(subtitle));
+        }
+        
         // Fade in
         const float coverDuration = 1f;
         for (float f = 0; f < coverDuration; f += Time.deltaTime)
@@ -38,12 +44,6 @@ public class SplashScreen : MonoBehaviour
             c.a = Mathf.Lerp(1f, 0f, CoverCurve.Evaluate(f / coverDuration));
             Cover.color = c;
             yield return null;
-        }
-        
-        _currTime = 0;
-        foreach (Subtitle subtitle in Subtitles)
-        {
-            StartCoroutine(SubtitleCoroutine(subtitle));
         }
         
         yield return new WaitForSeconds(5f);
