@@ -14,6 +14,8 @@ public class Player : MonoBehaviour
     private BoxCollider2D _collider;
     public bool CanTraverse = true;
 
+    public Animator Animator;
+
     private bool _isMoving;
     private Coroutine _moveCoroutine;
 
@@ -97,6 +99,8 @@ public class Player : MonoBehaviour
         StartCoroutine(PlayFootstepParticleCoroutine());
         Game.Sfx.PlayFootstep();
 
+        Animator.speed = 0;
+
         const float duration = 0.15f;
         for (float f = 0; f < duration; f += Time.deltaTime)
         {
@@ -104,6 +108,8 @@ public class Player : MonoBehaviour
             transform.position = Vector2.Lerp(src, target, t);
             yield return null;
         }
+        
+        Animator.speed = 1;
 
         transform.position = target;
         _isMoving = false;
