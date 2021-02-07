@@ -26,6 +26,8 @@ public class SplashScreen : MonoBehaviour
 
     public AudioSource Audio;
 
+    private bool _isStartingGame = false;
+
     IEnumerator Start()
     {
         foreach (Subtitle subtitle in Subtitles)
@@ -57,8 +59,9 @@ public class SplashScreen : MonoBehaviour
     
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (!_isStartingGame && Input.GetKeyDown(KeyCode.Space))
         {
+            _isStartingGame = true;
             StartCoroutine(FadeOutScene());
         }
     }
